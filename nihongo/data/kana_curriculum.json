@@ -1,0 +1,1447 @@
+{
+"batches": [
+{
+"id": "hiragana_vowels",
+"characters": [
+{"kana": "あ", "romaji": "a"},
+{"kana": "い", "romaji": "i"},
+{"kana": "う", "romaji": "u"},
+{"kana": "え", "romaji": "e"},
+{"kana": "お", "romaji": "o"}
+],
+"example_words": [
+{"kana": "あい", "romaji": "ai", "meaning": "love"},
+{"kana": "あお", "romaji": "ao", "meaning": "blue"},
+{"kana": "いえ", "romaji": "ie", "meaning": "house"},
+{"kana": "うえ", "romaji": "ue", "meaning": "above; on top"},
+{"kana": "え", "romaji": "e", "meaning": "picture"}
+],
+"quiz_bank": [
+{"kana": "あ", "romaji": "a"},
+{"kana": "い", "romaji": "i"},
+{"kana": "う", "romaji": "u"},
+{"kana": "え", "romaji": "e"},
+{"kana": "お", "romaji": "o"},
+{"kana": "あ", "romaji": "a"},
+{"kana": "い", "romaji": "i"},
+{"kana": "う", "romaji": "u"},
+{"kana": "え", "romaji": "e"},
+{"kana": "お", "romaji": "o"}
+]
+},
+{
+"id": "hiragana_k_row",
+"characters": [
+{"kana": "か", "romaji": "ka"},
+{"kana": "き", "romaji": "ki"},
+{"kana": "く", "romaji": "ku"},
+{"kana": "け", "romaji": "ke"},
+{"kana": "こ", "romaji": "ko"}
+],
+"example_words": [
+{"kana": "かお", "romaji": "kao", "meaning": "face"},
+{"kana": "いけ", "romaji": "ike", "meaning": "pond"},
+{"kana": "こえ", "romaji": "koe", "meaning": "voice"},
+{"kana": "あか", "romaji": "aka", "meaning": "red"},
+{"kana": "きく", "romaji": "kiku", "meaning": "chrysanthemum"}
+],
+"quiz_bank": [
+{"kana": "か", "romaji": "ka"},
+{"kana": "き", "romaji": "ki"},
+{"kana": "く", "romaji": "ku"},
+{"kana": "け", "romaji": "ke"},
+{"kana": "こ", "romaji": "ko"},
+{"kana": "か", "romaji": "ka"},
+{"kana": "き", "romaji": "ki"},
+{"kana": "く", "romaji": "ku"},
+{"kana": "け", "romaji": "ke"},
+{"kana": "こ", "romaji": "ko"}
+]
+},
+{
+"id": "hiragana_s_row",
+"characters": [
+{"kana": "さ", "romaji": "sa"},
+{"kana": "し", "romaji": "shi"},
+{"kana": "す", "romaji": "su"},
+{"kana": "せ", "romaji": "se"},
+{"kana": "そ", "romaji": "so"}
+],
+"example_words": [
+{"kana": "すし", "romaji": "sushi", "meaning": "sushi"},
+{"kana": "あさ", "romaji": "asa", "meaning": "morning"},
+{"kana": "しお", "romaji": "shio", "meaning": "salt"},
+{"kana": "そこ", "romaji": "soko", "meaning": "there"},
+{"kana": "せかい", "romaji": "sekai", "meaning": "world"}
+],
+"quiz_bank": [
+{"kana": "さ", "romaji": "sa"},
+{"kana": "し", "romaji": "shi"},
+{"kana": "す", "romaji": "su"},
+{"kana": "せ", "romaji": "se"},
+{"kana": "そ", "romaji": "so"},
+{"kana": "さ", "romaji": "sa"},
+{"kana": "し", "romaji": "shi"},
+{"kana": "す", "romaji": "su"},
+{"kana": "せ", "romaji": "se"},
+{"kana": "そ", "romaji": "so"}
+]
+},
+{
+"id": "hiragana_t_row",
+"characters": [
+{"kana": "た", "romaji": "ta"},
+{"kana": "ち", "romaji": "chi"},
+{"kana": "つ", "romaji": "tsu"},
+{"kana": "て", "romaji": "te"},
+{"kana": "と", "romaji": "to"}
+],
+"example_words": [
+{"kana": "した", "romaji": "shita", "meaning": "below; under"},
+{"kana": "たこ", "romaji": "tako", "meaning": "octopus"},
+{"kana": "ちかい", "romaji": "chikai", "meaning": "near"},
+{"kana": "つき", "romaji": "tsuki", "meaning": "moon"},
+{"kana": "とけい", "romaji": "tokei", "meaning": "clock; watch"}
+],
+"quiz_bank": [
+{"kana": "た", "romaji": "ta"},
+{"kana": "ち", "romaji": "chi"},
+{"kana": "つ", "romaji": "tsu"},
+{"kana": "て", "romaji": "te"},
+{"kana": "と", "romaji": "to"},
+{"kana": "た", "romaji": "ta"},
+{"kana": "ち", "romaji": "chi"},
+{"kana": "つ", "romaji": "tsu"},
+{"kana": "て", "romaji": "te"},
+{"kana": "と", "romaji": "to"}
+]
+},
+{
+"id": "hiragana_n_row",
+"characters": [
+{"kana": "な", "romaji": "na"},
+{"kana": "に", "romaji": "ni"},
+{"kana": "ぬ", "romaji": "nu"},
+{"kana": "ね", "romaji": "ne"},
+{"kana": "の", "romaji": "no"}
+],
+"example_words": [
+{"kana": "ねこ", "romaji": "neko", "meaning": "cat"},
+{"kana": "いぬ", "romaji": "inu", "meaning": "dog"},
+{"kana": "なつ", "romaji": "natsu", "meaning": "summer"},
+{"kana": "にく", "romaji": "niku", "meaning": "meat"},
+{"kana": "きのこ", "romaji": "kinoko", "meaning": "mushroom"}
+],
+"quiz_bank": [
+{"kana": "な", "romaji": "na"},
+{"kana": "に", "romaji": "ni"},
+{"kana": "ぬ", "romaji": "nu"},
+{"kana": "ね", "romaji": "ne"},
+{"kana": "の", "romaji": "no"},
+{"kana": "な", "romaji": "na"},
+{"kana": "に", "romaji": "ni"},
+{"kana": "ぬ", "romaji": "nu"},
+{"kana": "ね", "romaji": "ne"},
+{"kana": "の", "romaji": "no"}
+]
+},
+{
+"id": "hiragana_h_row",
+"characters": [
+{"kana": "は", "romaji": "ha"},
+{"kana": "ひ", "romaji": "hi"},
+{"kana": "ふ", "romaji": "fu"},
+{"kana": "へ", "romaji": "he"},
+{"kana": "ほ", "romaji": "ho"}
+],
+"example_words": [
+{"kana": "はな", "romaji": "hana", "meaning": "flower"},
+{"kana": "ひと", "romaji": "hito", "meaning": "person"},
+{"kana": "ふね", "romaji": "fune", "meaning": "boat"},
+{"kana": "ほし", "romaji": "hoshi", "meaning": "star"},
+{"kana": "へた", "romaji": "heta", "meaning": "unskillful"}
+],
+"quiz_bank": [
+{"kana": "は", "romaji": "ha"},
+{"kana": "ひ", "romaji": "hi"},
+{"kana": "ふ", "romaji": "fu"},
+{"kana": "へ", "romaji": "he"},
+{"kana": "ほ", "romaji": "ho"},
+{"kana": "は", "romaji": "ha"},
+{"kana": "ひ", "romaji": "hi"},
+{"kana": "ふ", "romaji": "fu"},
+{"kana": "へ", "romaji": "he"},
+{"kana": "ほ", "romaji": "ho"}
+]
+},
+{
+"id": "hiragana_m_row",
+"characters": [
+{"kana": "ま", "romaji": "ma"},
+{"kana": "み", "romaji": "mi"},
+{"kana": "む", "romaji": "mu"},
+{"kana": "め", "romaji": "me"},
+{"kana": "も", "romaji": "mo"}
+],
+"example_words": [
+{"kana": "みみ", "romaji": "mimi", "meaning": "ear"},
+{"kana": "うま", "romaji": "uma", "meaning": "horse"},
+{"kana": "まめ", "romaji": "mame", "meaning": "bean"},
+{"kana": "もの", "romaji": "mono", "meaning": "thing"},
+{"kana": "あめ", "romaji": "ame", "meaning": "rain"}
+],
+"quiz_bank": [
+{"kana": "ま", "romaji": "ma"},
+{"kana": "み", "romaji": "mi"},
+{"kana": "む", "romaji": "mu"},
+{"kana": "め", "romaji": "me"},
+{"kana": "も", "romaji": "mo"},
+{"kana": "ま", "romaji": "ma"},
+{"kana": "み", "romaji": "mi"},
+{"kana": "む", "romaji": "mu"},
+{"kana": "め", "romaji": "me"},
+{"kana": "も", "romaji": "mo"}
+]
+},
+{
+"id": "hiragana_y_plus_r1",
+"characters": [
+{"kana": "や", "romaji": "ya"},
+{"kana": "ゆ", "romaji": "yu"},
+{"kana": "よ", "romaji": "yo"},
+{"kana": "ら", "romaji": "ra"},
+{"kana": "り", "romaji": "ri"}
+],
+"example_words": [
+{"kana": "やま", "romaji": "yama", "meaning": "mountain"},
+{"kana": "やさい", "romaji": "yasai", "meaning": "vegetables"},
+{"kana": "ゆか", "romaji": "yuka", "meaning": "floor"},
+{"kana": "よこ", "romaji": "yoko", "meaning": "side; beside"},
+{"kana": "からい", "romaji": "karai", "meaning": "spicy"},
+{"kana": "りす", "romaji": "risu", "meaning": "squirrel"}
+],
+"quiz_bank": [
+{"kana": "や", "romaji": "ya"},
+{"kana": "ゆ", "romaji": "yu"},
+{"kana": "よ", "romaji": "yo"},
+{"kana": "ら", "romaji": "ra"},
+{"kana": "り", "romaji": "ri"},
+{"kana": "や", "romaji": "ya"},
+{"kana": "ゆ", "romaji": "yu"},
+{"kana": "よ", "romaji": "yo"},
+{"kana": "ら", "romaji": "ra"},
+{"kana": "り", "romaji": "ri"}
+]
+},
+{
+"id": "hiragana_r2_plus_w",
+"characters": [
+{"kana": "る", "romaji": "ru"},
+{"kana": "れ", "romaji": "re"},
+{"kana": "ろ", "romaji": "ro"},
+{"kana": "わ", "romaji": "wa"},
+{"kana": "を", "romaji": "wo"},
+{"kana": "ん", "romaji": "n"}
+],
+"example_words": [
+{"kana": "わに", "romaji": "wani", "meaning": "crocodile"},
+{"kana": "わるい", "romaji": "warui", "meaning": "bad"},
+{"kana": "くるま", "romaji": "kuruma", "meaning": "car"},
+{"kana": "れきし", "romaji": "rekishi", "meaning": "history"},
+{"kana": "にくをくう", "romaji": "niku o kuu", "meaning": "eat meat"},
+{"kana": "ほん", "romaji": "hon", "meaning": "book"},
+{"kana": "みかん", "romaji": "mikan", "meaning": "mandarin orange"},
+{"kana": "にほん", "romaji": "nihon", "meaning": "Japan"}
+],
+"quiz_bank": [
+{"kana": "る", "romaji": "ru"},
+{"kana": "れ", "romaji": "re"},
+{"kana": "ろ", "romaji": "ro"},
+{"kana": "わ", "romaji": "wa"},
+{"kana": "を", "romaji": "wo"},
+{"kana": "ん", "romaji": "n"},
+{"kana": "る", "romaji": "ru"},
+{"kana": "れ", "romaji": "re"},
+{"kana": "ろ", "romaji": "ro"},
+{"kana": "わ", "romaji": "wa"}
+]
+},
+{
+"id": "hiragana_g_row",
+"characters": [
+{"kana": "が", "romaji": "ga"},
+{"kana": "ぎ", "romaji": "gi"},
+{"kana": "ぐ", "romaji": "gu"},
+{"kana": "げ", "romaji": "ge"},
+{"kana": "ご", "romaji": "go"}
+],
+"example_words": [
+{"kana": "かぎ", "romaji": "kagi", "meaning": "key"},
+{"kana": "えいが", "romaji": "eiga", "meaning": "movie"},
+{"kana": "げんき", "romaji": "genki", "meaning": "healthy; energetic"},
+{"kana": "ごはん", "romaji": "gohan", "meaning": "cooked rice; meal"},
+{"kana": "りんご", "romaji": "ringo", "meaning": "apple"}
+],
+"quiz_bank": [
+{"kana": "が", "romaji": "ga"},
+{"kana": "ぎ", "romaji": "gi"},
+{"kana": "ぐ", "romaji": "gu"},
+{"kana": "げ", "romaji": "ge"},
+{"kana": "ご", "romaji": "go"},
+{"kana": "が", "romaji": "ga"},
+{"kana": "ぎ", "romaji": "gi"},
+{"kana": "ぐ", "romaji": "gu"},
+{"kana": "げ", "romaji": "ge"},
+{"kana": "ご", "romaji": "go"}
+]
+},
+{
+"id": "hiragana_z_row",
+"characters": [
+{"kana": "ざ", "romaji": "za"},
+{"kana": "じ", "romaji": "ji"},
+{"kana": "ず", "romaji": "zu"},
+{"kana": "ぜ", "romaji": "ze"},
+{"kana": "ぞ", "romaji": "zo"}
+],
+"example_words": [
+{"kana": "みず", "romaji": "mizu", "meaning": "water"},
+{"kana": "かぜ", "romaji": "kaze", "meaning": "wind"},
+{"kana": "ぞう", "romaji": "zou", "meaning": "elephant"},
+{"kana": "すず", "romaji": "suzu", "meaning": "bell"},
+{"kana": "ざる", "romaji": "zaru", "meaning": "bamboo basket; sieve"}
+],
+"quiz_bank": [
+{"kana": "ざ", "romaji": "za"},
+{"kana": "じ", "romaji": "ji"},
+{"kana": "ず", "romaji": "zu"},
+{"kana": "ぜ", "romaji": "ze"},
+{"kana": "ぞ", "romaji": "zo"},
+{"kana": "ざ", "romaji": "za"},
+{"kana": "じ", "romaji": "ji"},
+{"kana": "ず", "romaji": "zu"},
+{"kana": "ぜ", "romaji": "ze"},
+{"kana": "ぞ", "romaji": "zo"}
+]
+},
+{
+"id": "hiragana_d_row",
+"characters": [
+{"kana": "だ", "romaji": "da"},
+{"kana": "ぢ", "romaji": "ji"},
+{"kana": "づ", "romaji": "zu"},
+{"kana": "で", "romaji": "de"},
+{"kana": "ど", "romaji": "do"}
+],
+"example_words": [
+{"kana": "ちず", "romaji": "chizu", "meaning": "map"},
+{"kana": "でぐち", "romaji": "deguchi", "meaning": "exit"},
+{"kana": "まど", "romaji": "mado", "meaning": "window"},
+{"kana": "くだもの", "romaji": "kudamono", "meaning": "fruit"},
+{"kana": "はなぢ", "romaji": "hanaji", "meaning": "nosebleed"}
+],
+"quiz_bank": [
+{"kana": "だ", "romaji": "da"},
+{"kana": "ぢ", "romaji": "ji"},
+{"kana": "づ", "romaji": "zu"},
+{"kana": "で", "romaji": "de"},
+{"kana": "ど", "romaji": "do"},
+{"kana": "だ", "romaji": "da"},
+{"kana": "ぢ", "romaji": "ji"},
+{"kana": "づ", "romaji": "zu"},
+{"kana": "で", "romaji": "de"},
+{"kana": "ど", "romaji": "do"}
+]
+},
+{
+"id": "hiragana_b_row",
+"characters": [
+{"kana": "ば", "romaji": "ba"},
+{"kana": "び", "romaji": "bi"},
+{"kana": "ぶ", "romaji": "bu"},
+{"kana": "べ", "romaji": "be"},
+{"kana": "ぼ", "romaji": "bo"}
+],
+"example_words": [
+{"kana": "かばん", "romaji": "kaban", "meaning": "bag"},
+{"kana": "ぶた", "romaji": "buta", "meaning": "pig"},
+{"kana": "えび", "romaji": "ebi", "meaning": "shrimp"},
+{"kana": "そば", "romaji": "soba", "meaning": "soba noodles"},
+{"kana": "へび", "romaji": "hebi", "meaning": "snake"}
+],
+"quiz_bank": [
+{"kana": "ば", "romaji": "ba"},
+{"kana": "び", "romaji": "bi"},
+{"kana": "ぶ", "romaji": "bu"},
+{"kana": "べ", "romaji": "be"},
+{"kana": "ぼ", "romaji": "bo"},
+{"kana": "ば", "romaji": "ba"},
+{"kana": "び", "romaji": "bi"},
+{"kana": "ぶ", "romaji": "bu"},
+{"kana": "べ", "romaji": "be"},
+{"kana": "ぼ", "romaji": "bo"}
+]
+},
+{
+"id": "hiragana_p_row",
+"characters": [
+{"kana": "ぱ", "romaji": "pa"},
+{"kana": "ぴ", "romaji": "pi"},
+{"kana": "ぷ", "romaji": "pu"},
+{"kana": "ぺ", "romaji": "pe"},
+{"kana": "ぽ", "romaji": "po"}
+],
+"example_words": [
+{"kana": "ぱん", "romaji": "pan", "meaning": "bread"},
+{"kana": "ぴかぴか", "romaji": "pikapika", "meaning": "shiny; sparkling"},
+{"kana": "ぺこぺこ", "romaji": "pekopeko", "meaning": "very hungry"},
+{"kana": "ぽかぽか", "romaji": "pokapoka", "meaning": "pleasantly warm"},
+{"kana": "ぷかぷか", "romaji": "pukapuka", "meaning": "floating lightly"}
+],
+"quiz_bank": [
+{"kana": "ぱ", "romaji": "pa"},
+{"kana": "ぴ", "romaji": "pi"},
+{"kana": "ぷ", "romaji": "pu"},
+{"kana": "ぺ", "romaji": "pe"},
+{"kana": "ぽ", "romaji": "po"},
+{"kana": "ぱ", "romaji": "pa"},
+{"kana": "ぴ", "romaji": "pi"},
+{"kana": "ぷ", "romaji": "pu"},
+{"kana": "ぺ", "romaji": "pe"},
+{"kana": "ぽ", "romaji": "po"}
+]
+},
+{
+"id": "hiragana_yoon_k_s_t",
+"characters": [
+{"kana": "きゃ", "romaji": "kya"},
+{"kana": "きゅ", "romaji": "kyu"},
+{"kana": "きょ", "romaji": "kyo"},
+{"kana": "しゃ", "romaji": "sha"},
+{"kana": "しゅ", "romaji": "shu"},
+{"kana": "しょ", "romaji": "sho"},
+{"kana": "ちゃ", "romaji": "cha"},
+{"kana": "ちゅ", "romaji": "chu"},
+{"kana": "ちょ", "romaji": "cho"}
+],
+"example_words": [
+{"kana": "きゃく", "romaji": "kyaku", "meaning": "guest; customer"},
+{"kana": "きょねん", "romaji": "kyonen", "meaning": "last year"},
+{"kana": "しゃしん", "romaji": "shashin", "meaning": "photograph"},
+{"kana": "しゅみ", "romaji": "shumi", "meaning": "hobby"},
+{"kana": "ちゃ", "romaji": "cha", "meaning": "tea"},
+{"kana": "ちゅうい", "romaji": "chuui", "meaning": "caution; attention"}
+],
+"quiz_bank": [
+{"kana": "きゃ", "romaji": "kya"},
+{"kana": "きゅ", "romaji": "kyu"},
+{"kana": "きょ", "romaji": "kyo"},
+{"kana": "しゃ", "romaji": "sha"},
+{"kana": "しゅ", "romaji": "shu"},
+{"kana": "しょ", "romaji": "sho"},
+{"kana": "ちゃ", "romaji": "cha"},
+{"kana": "ちゅ", "romaji": "chu"},
+{"kana": "ちょ", "romaji": "cho"},
+{"kana": "きゃ", "romaji": "kya"}
+]
+},
+{
+"id": "hiragana_yoon_n_h_m",
+"characters": [
+{"kana": "にゃ", "romaji": "nya"},
+{"kana": "にゅ", "romaji": "nyu"},
+{"kana": "にょ", "romaji": "nyo"},
+{"kana": "ひゃ", "romaji": "hya"},
+{"kana": "ひゅ", "romaji": "hyu"},
+{"kana": "ひょ", "romaji": "hyo"},
+{"kana": "みゃ", "romaji": "mya"},
+{"kana": "みゅ", "romaji": "myu"},
+{"kana": "みょ", "romaji": "myo"}
+],
+"example_words": [
+{"kana": "にゅういん", "romaji": "nyuuin", "meaning": "hospitalization"},
+{"kana": "にゅうがく", "romaji": "nyuugaku", "meaning": "school admission"},
+{"kana": "ひゃく", "romaji": "hyaku", "meaning": "one hundred"},
+{"kana": "ひょう", "romaji": "hyou", "meaning": "table; chart"},
+{"kana": "みゃく", "romaji": "myaku", "meaning": "pulse"},
+{"kana": "みょうじ", "romaji": "myouji", "meaning": "surname"}
+],
+"quiz_bank": [
+{"kana": "にゃ", "romaji": "nya"},
+{"kana": "にゅ", "romaji": "nyu"},
+{"kana": "にょ", "romaji": "nyo"},
+{"kana": "ひゃ", "romaji": "hya"},
+{"kana": "ひゅ", "romaji": "hyu"},
+{"kana": "ひょ", "romaji": "hyo"},
+{"kana": "みゃ", "romaji": "mya"},
+{"kana": "みゅ", "romaji": "myu"},
+{"kana": "みょ", "romaji": "myo"},
+{"kana": "にゃ", "romaji": "nya"}
+]
+},
+{
+"id": "hiragana_yoon_r_g_j",
+"characters": [
+{"kana": "りゃ", "romaji": "rya"},
+{"kana": "りゅ", "romaji": "ryu"},
+{"kana": "りょ", "romaji": "ryo"},
+{"kana": "ぎゃ", "romaji": "gya"},
+{"kana": "ぎゅ", "romaji": "gyu"},
+{"kana": "ぎょ", "romaji": "gyo"},
+{"kana": "じゃ", "romaji": "ja"},
+{"kana": "じゅ", "romaji": "ju"},
+{"kana": "じょ", "romaji": "jo"}
+],
+"example_words": [
+{"kana": "りょこう", "romaji": "ryokou", "meaning": "travel"},
+{"kana": "りょうり", "romaji": "ryouri", "meaning": "cooking; cuisine"},
+{"kana": "ぎゅうにく", "romaji": "gyuuniku", "meaning": "beef"},
+{"kana": "ぎょうざ", "romaji": "gyouza", "meaning": "gyoza dumplings"},
+{"kana": "じゃま", "romaji": "jama", "meaning": "hindrance; in the way"},
+{"kana": "じょせい", "romaji": "josei", "meaning": "woman; female"}
+],
+"quiz_bank": [
+{"kana": "りゃ", "romaji": "rya"},
+{"kana": "りゅ", "romaji": "ryu"},
+{"kana": "りょ", "romaji": "ryo"},
+{"kana": "ぎゃ", "romaji": "gya"},
+{"kana": "ぎゅ", "romaji": "gyu"},
+{"kana": "ぎょ", "romaji": "gyo"},
+{"kana": "じゃ", "romaji": "ja"},
+{"kana": "じゅ", "romaji": "ju"},
+{"kana": "じょ", "romaji": "jo"},
+{"kana": "りゃ", "romaji": "rya"}
+]
+},
+{
+"id": "hiragana_yoon_b_p",
+"characters": [
+{"kana": "びゃ", "romaji": "bya"},
+{"kana": "びゅ", "romaji": "byu"},
+{"kana": "びょ", "romaji": "byo"},
+{"kana": "ぴゃ", "romaji": "pya"},
+{"kana": "ぴゅ", "romaji": "pyu"},
+{"kana": "ぴょ", "romaji": "pyo"}
+],
+"example_words": [
+{"kana": "びょういん", "romaji": "byouin", "meaning": "hospital"},
+{"kana": "びょうき", "romaji": "byouki", "meaning": "illness"},
+{"kana": "びゃくや", "romaji": "byakuya", "meaning": "white night"},
+{"kana": "びゅうびゅう", "romaji": "byuubyuu", "meaning": "whistling strongly (wind)"},
+{"kana": "ぴょんぴょん", "romaji": "pyonpyon", "meaning": "hopping repeatedly"},
+{"kana": "ぴゅあ", "romaji": "pyua", "meaning": "pure"}
+],
+"quiz_bank": [
+{"kana": "びゃ", "romaji": "bya"},
+{"kana": "びゅ", "romaji": "byu"},
+{"kana": "びょ", "romaji": "byo"},
+{"kana": "ぴゃ", "romaji": "pya"},
+{"kana": "ぴゅ", "romaji": "pyu"},
+{"kana": "ぴょ", "romaji": "pyo"},
+{"kana": "びゃ", "romaji": "bya"},
+{"kana": "びゅ", "romaji": "byu"},
+{"kana": "びょ", "romaji": "byo"},
+{"kana": "ぴゃ", "romaji": "pya"}
+]
+},
+{
+"id": "hiragana_sokuon_long_vowels",
+"characters": [
+{"kana": "っ", "romaji": "small-tsu"},
+{"kana": "ああ", "romaji": "aa"},
+{"kana": "いい", "romaji": "ii"},
+{"kana": "うう", "romaji": "uu"},
+{"kana": "えい", "romaji": "ei"},
+{"kana": "ええ", "romaji": "ee"},
+{"kana": "おう", "romaji": "ou"},
+{"kana": "おお", "romaji": "oo"}
+],
+"example_words": [
+{"kana": "きって", "romaji": "kitte", "meaning": "postage stamp"},
+{"kana": "がっこう", "romaji": "gakkou", "meaning": "school"},
+{"kana": "ざっし", "romaji": "zasshi", "meaning": "magazine"},
+{"kana": "いっぱい", "romaji": "ippai", "meaning": "full; one cup"},
+{"kana": "おかあさん", "romaji": "okaasan", "meaning": "mother"},
+{"kana": "おねえさん", "romaji": "oneesan", "meaning": "older sister"},
+{"kana": "せんせい", "romaji": "sensei", "meaning": "teacher"},
+{"kana": "おおきい", "romaji": "ookii", "meaning": "big"}
+],
+"quiz_bank": [
+{"kana": "っ", "romaji": "small-tsu"},
+{"kana": "ああ", "romaji": "aa"},
+{"kana": "いい", "romaji": "ii"},
+{"kana": "うう", "romaji": "uu"},
+{"kana": "えい", "romaji": "ei"},
+{"kana": "ええ", "romaji": "ee"},
+{"kana": "おう", "romaji": "ou"},
+{"kana": "おお", "romaji": "oo"},
+{"kana": "っ", "romaji": "small-tsu"},
+{"kana": "ああ", "romaji": "aa"}
+]
+},
+{
+"id": "katakana_vowels",
+"characters": [
+{"kana": "ア", "romaji": "a"},
+{"kana": "イ", "romaji": "i"},
+{"kana": "ウ", "romaji": "u"},
+{"kana": "エ", "romaji": "e"},
+{"kana": "オ", "romaji": "o"}
+],
+"example_words": [
+{"kana": "アイ", "romaji": "ai", "meaning": "love"},
+{"kana": "アオ", "romaji": "ao", "meaning": "blue"},
+{"kana": "イエ", "romaji": "ie", "meaning": "house"},
+{"kana": "ウエ", "romaji": "ue", "meaning": "above; on top"},
+{"kana": "エ", "romaji": "e", "meaning": "picture"}
+],
+"quiz_bank": [
+{"kana": "ア", "romaji": "a"},
+{"kana": "イ", "romaji": "i"},
+{"kana": "ウ", "romaji": "u"},
+{"kana": "エ", "romaji": "e"},
+{"kana": "オ", "romaji": "o"},
+{"kana": "ア", "romaji": "a"},
+{"kana": "イ", "romaji": "i"},
+{"kana": "ウ", "romaji": "u"},
+{"kana": "エ", "romaji": "e"},
+{"kana": "オ", "romaji": "o"}
+]
+},
+{
+"id": "katakana_k_row",
+"characters": [
+{"kana": "カ", "romaji": "ka"},
+{"kana": "キ", "romaji": "ki"},
+{"kana": "ク", "romaji": "ku"},
+{"kana": "ケ", "romaji": "ke"},
+{"kana": "コ", "romaji": "ko"}
+],
+"example_words": [
+{"kana": "カオ", "romaji": "kao", "meaning": "face"},
+{"kana": "イケ", "romaji": "ike", "meaning": "pond"},
+{"kana": "コエ", "romaji": "koe", "meaning": "voice"},
+{"kana": "アカ", "romaji": "aka", "meaning": "red"},
+{"kana": "キク", "romaji": "kiku", "meaning": "chrysanthemum"}
+],
+"quiz_bank": [
+{"kana": "カ", "romaji": "ka"},
+{"kana": "キ", "romaji": "ki"},
+{"kana": "ク", "romaji": "ku"},
+{"kana": "ケ", "romaji": "ke"},
+{"kana": "コ", "romaji": "ko"},
+{"kana": "カ", "romaji": "ka"},
+{"kana": "キ", "romaji": "ki"},
+{"kana": "ク", "romaji": "ku"},
+{"kana": "ケ", "romaji": "ke"},
+{"kana": "コ", "romaji": "ko"}
+]
+},
+{
+"id": "katakana_s_row",
+"characters": [
+{"kana": "サ", "romaji": "sa"},
+{"kana": "シ", "romaji": "shi"},
+{"kana": "ス", "romaji": "su"},
+{"kana": "セ", "romaji": "se"},
+{"kana": "ソ", "romaji": "so"}
+],
+"example_words": [
+{"kana": "スシ", "romaji": "sushi", "meaning": "sushi"},
+{"kana": "アサ", "romaji": "asa", "meaning": "morning"},
+{"kana": "シオ", "romaji": "shio", "meaning": "salt"},
+{"kana": "ソコ", "romaji": "soko", "meaning": "there"},
+{"kana": "セカイ", "romaji": "sekai", "meaning": "world"}
+],
+"quiz_bank": [
+{"kana": "サ", "romaji": "sa"},
+{"kana": "シ", "romaji": "shi"},
+{"kana": "ス", "romaji": "su"},
+{"kana": "セ", "romaji": "se"},
+{"kana": "ソ", "romaji": "so"},
+{"kana": "サ", "romaji": "sa"},
+{"kana": "シ", "romaji": "shi"},
+{"kana": "ス", "romaji": "su"},
+{"kana": "セ", "romaji": "se"},
+{"kana": "ソ", "romaji": "so"}
+]
+},
+{
+"id": "katakana_t_row",
+"characters": [
+{"kana": "タ", "romaji": "ta"},
+{"kana": "チ", "romaji": "chi"},
+{"kana": "ツ", "romaji": "tsu"},
+{"kana": "テ", "romaji": "te"},
+{"kana": "ト", "romaji": "to"}
+],
+"example_words": [
+{"kana": "シタ", "romaji": "shita", "meaning": "below; under"},
+{"kana": "タコ", "romaji": "tako", "meaning": "octopus"},
+{"kana": "チカイ", "romaji": "chikai", "meaning": "near"},
+{"kana": "ツキ", "romaji": "tsuki", "meaning": "moon"},
+{"kana": "トケイ", "romaji": "tokei", "meaning": "clock; watch"}
+],
+"quiz_bank": [
+{"kana": "タ", "romaji": "ta"},
+{"kana": "チ", "romaji": "chi"},
+{"kana": "ツ", "romaji": "tsu"},
+{"kana": "テ", "romaji": "te"},
+{"kana": "ト", "romaji": "to"},
+{"kana": "タ", "romaji": "ta"},
+{"kana": "チ", "romaji": "chi"},
+{"kana": "ツ", "romaji": "tsu"},
+{"kana": "テ", "romaji": "te"},
+{"kana": "ト", "romaji": "to"}
+]
+},
+{
+"id": "katakana_n_row",
+"characters": [
+{"kana": "ナ", "romaji": "na"},
+{"kana": "ニ", "romaji": "ni"},
+{"kana": "ヌ", "romaji": "nu"},
+{"kana": "ネ", "romaji": "ne"},
+{"kana": "ノ", "romaji": "no"}
+],
+"example_words": [
+{"kana": "ネコ", "romaji": "neko", "meaning": "cat"},
+{"kana": "イヌ", "romaji": "inu", "meaning": "dog"},
+{"kana": "ナツ", "romaji": "natsu", "meaning": "summer"},
+{"kana": "ニク", "romaji": "niku", "meaning": "meat"},
+{"kana": "キノコ", "romaji": "kinoko", "meaning": "mushroom"}
+],
+"quiz_bank": [
+{"kana": "ナ", "romaji": "na"},
+{"kana": "ニ", "romaji": "ni"},
+{"kana": "ヌ", "romaji": "nu"},
+{"kana": "ネ", "romaji": "ne"},
+{"kana": "ノ", "romaji": "no"},
+{"kana": "ナ", "romaji": "na"},
+{"kana": "ニ", "romaji": "ni"},
+{"kana": "ヌ", "romaji": "nu"},
+{"kana": "ネ", "romaji": "ne"},
+{"kana": "ノ", "romaji": "no"}
+]
+},
+{
+"id": "katakana_h_row",
+"characters": [
+{"kana": "ハ", "romaji": "ha"},
+{"kana": "ヒ", "romaji": "hi"},
+{"kana": "フ", "romaji": "fu"},
+{"kana": "ヘ", "romaji": "he"},
+{"kana": "ホ", "romaji": "ho"}
+],
+"example_words": [
+{"kana": "ハナ", "romaji": "hana", "meaning": "flower"},
+{"kana": "ヒト", "romaji": "hito", "meaning": "person"},
+{"kana": "フネ", "romaji": "fune", "meaning": "boat"},
+{"kana": "ホシ", "romaji": "hoshi", "meaning": "star"},
+{"kana": "ヘタ", "romaji": "heta", "meaning": "unskillful"}
+],
+"quiz_bank": [
+{"kana": "ハ", "romaji": "ha"},
+{"kana": "ヒ", "romaji": "hi"},
+{"kana": "フ", "romaji": "fu"},
+{"kana": "ヘ", "romaji": "he"},
+{"kana": "ホ", "romaji": "ho"},
+{"kana": "ハ", "romaji": "ha"},
+{"kana": "ヒ", "romaji": "hi"},
+{"kana": "フ", "romaji": "fu"},
+{"kana": "ヘ", "romaji": "he"},
+{"kana": "ホ", "romaji": "ho"}
+]
+},
+{
+"id": "katakana_m_row",
+"characters": [
+{"kana": "マ", "romaji": "ma"},
+{"kana": "ミ", "romaji": "mi"},
+{"kana": "ム", "romaji": "mu"},
+{"kana": "メ", "romaji": "me"},
+{"kana": "モ", "romaji": "mo"}
+],
+"example_words": [
+{"kana": "ミミ", "romaji": "mimi", "meaning": "ear"},
+{"kana": "ウマ", "romaji": "uma", "meaning": "horse"},
+{"kana": "マメ", "romaji": "mame", "meaning": "bean"},
+{"kana": "モノ", "romaji": "mono", "meaning": "thing"},
+{"kana": "アメ", "romaji": "ame", "meaning": "rain"}
+],
+"quiz_bank": [
+{"kana": "マ", "romaji": "ma"},
+{"kana": "ミ", "romaji": "mi"},
+{"kana": "ム", "romaji": "mu"},
+{"kana": "メ", "romaji": "me"},
+{"kana": "モ", "romaji": "mo"},
+{"kana": "マ", "romaji": "ma"},
+{"kana": "ミ", "romaji": "mi"},
+{"kana": "ム", "romaji": "mu"},
+{"kana": "メ", "romaji": "me"},
+{"kana": "モ", "romaji": "mo"}
+]
+},
+{
+"id": "katakana_y_plus_r1",
+"characters": [
+{"kana": "ヤ", "romaji": "ya"},
+{"kana": "ユ", "romaji": "yu"},
+{"kana": "ヨ", "romaji": "yo"},
+{"kana": "ラ", "romaji": "ra"},
+{"kana": "リ", "romaji": "ri"}
+],
+"example_words": [
+{"kana": "ヤマ", "romaji": "yama", "meaning": "mountain"},
+{"kana": "ヤサイ", "romaji": "yasai", "meaning": "vegetables"},
+{"kana": "ユカ", "romaji": "yuka", "meaning": "floor"},
+{"kana": "ヨコ", "romaji": "yoko", "meaning": "side; beside"},
+{"kana": "カライ", "romaji": "karai", "meaning": "spicy"},
+{"kana": "リス", "romaji": "risu", "meaning": "squirrel"}
+],
+"quiz_bank": [
+{"kana": "ヤ", "romaji": "ya"},
+{"kana": "ユ", "romaji": "yu"},
+{"kana": "ヨ", "romaji": "yo"},
+{"kana": "ラ", "romaji": "ra"},
+{"kana": "リ", "romaji": "ri"},
+{"kana": "ヤ", "romaji": "ya"},
+{"kana": "ユ", "romaji": "yu"},
+{"kana": "ヨ", "romaji": "yo"},
+{"kana": "ラ", "romaji": "ra"},
+{"kana": "リ", "romaji": "ri"}
+]
+},
+{
+"id": "katakana_r2_plus_w",
+"characters": [
+{"kana": "ル", "romaji": "ru"},
+{"kana": "レ", "romaji": "re"},
+{"kana": "ロ", "romaji": "ro"},
+{"kana": "ワ", "romaji": "wa"},
+{"kana": "ヲ", "romaji": "wo"},
+{"kana": "ン", "romaji": "n"}
+],
+"example_words": [
+{"kana": "ワニ", "romaji": "wani", "meaning": "crocodile"},
+{"kana": "ワルイ", "romaji": "warui", "meaning": "bad"},
+{"kana": "クルマ", "romaji": "kuruma", "meaning": "car"},
+{"kana": "レキシ", "romaji": "rekishi", "meaning": "history"},
+{"kana": "ニクヲクウ", "romaji": "niku o kuu", "meaning": "eat meat"},
+{"kana": "ホン", "romaji": "hon", "meaning": "book"},
+{"kana": "ミカン", "romaji": "mikan", "meaning": "mandarin orange"},
+{"kana": "ニホン", "romaji": "nihon", "meaning": "Japan"}
+],
+"quiz_bank": [
+{"kana": "ル", "romaji": "ru"},
+{"kana": "レ", "romaji": "re"},
+{"kana": "ロ", "romaji": "ro"},
+{"kana": "ワ", "romaji": "wa"},
+{"kana": "ヲ", "romaji": "wo"},
+{"kana": "ン", "romaji": "n"},
+{"kana": "ル", "romaji": "ru"},
+{"kana": "レ", "romaji": "re"},
+{"kana": "ロ", "romaji": "ro"},
+{"kana": "ワ", "romaji": "wa"}
+]
+},
+{
+"id": "katakana_g_row",
+"characters": [
+{"kana": "ガ", "romaji": "ga"},
+{"kana": "ギ", "romaji": "gi"},
+{"kana": "グ", "romaji": "gu"},
+{"kana": "ゲ", "romaji": "ge"},
+{"kana": "ゴ", "romaji": "go"}
+],
+"example_words": [
+{"kana": "カギ", "romaji": "kagi", "meaning": "key"},
+{"kana": "エイガ", "romaji": "eiga", "meaning": "movie"},
+{"kana": "ゲンキ", "romaji": "genki", "meaning": "healthy; energetic"},
+{"kana": "ゴハン", "romaji": "gohan", "meaning": "cooked rice; meal"},
+{"kana": "リンゴ", "romaji": "ringo", "meaning": "apple"}
+],
+"quiz_bank": [
+{"kana": "ガ", "romaji": "ga"},
+{"kana": "ギ", "romaji": "gi"},
+{"kana": "グ", "romaji": "gu"},
+{"kana": "ゲ", "romaji": "ge"},
+{"kana": "ゴ", "romaji": "go"},
+{"kana": "ガ", "romaji": "ga"},
+{"kana": "ギ", "romaji": "gi"},
+{"kana": "グ", "romaji": "gu"},
+{"kana": "ゲ", "romaji": "ge"},
+{"kana": "ゴ", "romaji": "go"}
+]
+},
+{
+"id": "katakana_z_row",
+"characters": [
+{"kana": "ザ", "romaji": "za"},
+{"kana": "ジ", "romaji": "ji"},
+{"kana": "ズ", "romaji": "zu"},
+{"kana": "ゼ", "romaji": "ze"},
+{"kana": "ゾ", "romaji": "zo"}
+],
+"example_words": [
+{"kana": "ミズ", "romaji": "mizu", "meaning": "water"},
+{"kana": "カゼ", "romaji": "kaze", "meaning": "wind"},
+{"kana": "ゾウ", "romaji": "zou", "meaning": "elephant"},
+{"kana": "スズ", "romaji": "suzu", "meaning": "bell"},
+{"kana": "ザル", "romaji": "zaru", "meaning": "bamboo basket; sieve"}
+],
+"quiz_bank": [
+{"kana": "ザ", "romaji": "za"},
+{"kana": "ジ", "romaji": "ji"},
+{"kana": "ズ", "romaji": "zu"},
+{"kana": "ゼ", "romaji": "ze"},
+{"kana": "ゾ", "romaji": "zo"},
+{"kana": "ザ", "romaji": "za"},
+{"kana": "ジ", "romaji": "ji"},
+{"kana": "ズ", "romaji": "zu"},
+{"kana": "ゼ", "romaji": "ze"},
+{"kana": "ゾ", "romaji": "zo"}
+]
+},
+{
+"id": "katakana_d_row",
+"characters": [
+{"kana": "ダ", "romaji": "da"},
+{"kana": "ヂ", "romaji": "ji"},
+{"kana": "ヅ", "romaji": "zu"},
+{"kana": "デ", "romaji": "de"},
+{"kana": "ド", "romaji": "do"}
+],
+"example_words": [
+{"kana": "チズ", "romaji": "chizu", "meaning": "map"},
+{"kana": "デグチ", "romaji": "deguchi", "meaning": "exit"},
+{"kana": "マド", "romaji": "mado", "meaning": "window"},
+{"kana": "クダモノ", "romaji": "kudamono", "meaning": "fruit"},
+{"kana": "ハナヂ", "romaji": "hanaji", "meaning": "nosebleed"}
+],
+"quiz_bank": [
+{"kana": "ダ", "romaji": "da"},
+{"kana": "ヂ", "romaji": "ji"},
+{"kana": "ヅ", "romaji": "zu"},
+{"kana": "デ", "romaji": "de"},
+{"kana": "ド", "romaji": "do"},
+{"kana": "ダ", "romaji": "da"},
+{"kana": "ヂ", "romaji": "ji"},
+{"kana": "ヅ", "romaji": "zu"},
+{"kana": "デ", "romaji": "de"},
+{"kana": "ド", "romaji": "do"}
+]
+},
+{
+"id": "katakana_b_row",
+"characters": [
+{"kana": "バ", "romaji": "ba"},
+{"kana": "ビ", "romaji": "bi"},
+{"kana": "ブ", "romaji": "bu"},
+{"kana": "ベ", "romaji": "be"},
+{"kana": "ボ", "romaji": "bo"}
+],
+"example_words": [
+{"kana": "カバン", "romaji": "kaban", "meaning": "bag"},
+{"kana": "ブタ", "romaji": "buta", "meaning": "pig"},
+{"kana": "エビ", "romaji": "ebi", "meaning": "shrimp"},
+{"kana": "ソバ", "romaji": "soba", "meaning": "soba noodles"},
+{"kana": "ヘビ", "romaji": "hebi", "meaning": "snake"}
+],
+"quiz_bank": [
+{"kana": "バ", "romaji": "ba"},
+{"kana": "ビ", "romaji": "bi"},
+{"kana": "ブ", "romaji": "bu"},
+{"kana": "ベ", "romaji": "be"},
+{"kana": "ボ", "romaji": "bo"},
+{"kana": "バ", "romaji": "ba"},
+{"kana": "ビ", "romaji": "bi"},
+{"kana": "ブ", "romaji": "bu"},
+{"kana": "ベ", "romaji": "be"},
+{"kana": "ボ", "romaji": "bo"}
+]
+},
+{
+"id": "katakana_p_row",
+"characters": [
+{"kana": "パ", "romaji": "pa"},
+{"kana": "ピ", "romaji": "pi"},
+{"kana": "プ", "romaji": "pu"},
+{"kana": "ペ", "romaji": "pe"},
+{"kana": "ポ", "romaji": "po"}
+],
+"example_words": [
+{"kana": "パン", "romaji": "pan", "meaning": "bread"},
+{"kana": "ピカピカ", "romaji": "pikapika", "meaning": "shiny; sparkling"},
+{"kana": "ペコペコ", "romaji": "pekopeko", "meaning": "very hungry"},
+{"kana": "ポカポカ", "romaji": "pokapoka", "meaning": "pleasantly warm"},
+{"kana": "プカプカ", "romaji": "pukapuka", "meaning": "floating lightly"}
+],
+"quiz_bank": [
+{"kana": "パ", "romaji": "pa"},
+{"kana": "ピ", "romaji": "pi"},
+{"kana": "プ", "romaji": "pu"},
+{"kana": "ペ", "romaji": "pe"},
+{"kana": "ポ", "romaji": "po"},
+{"kana": "パ", "romaji": "pa"},
+{"kana": "ピ", "romaji": "pi"},
+{"kana": "プ", "romaji": "pu"},
+{"kana": "ペ", "romaji": "pe"},
+{"kana": "ポ", "romaji": "po"}
+]
+},
+{
+"id": "katakana_yoon_k_s_t",
+"characters": [
+{"kana": "キャ", "romaji": "kya"},
+{"kana": "キュ", "romaji": "kyu"},
+{"kana": "キョ", "romaji": "kyo"},
+{"kana": "シャ", "romaji": "sha"},
+{"kana": "シュ", "romaji": "shu"},
+{"kana": "ショ", "romaji": "sho"},
+{"kana": "チャ", "romaji": "cha"},
+{"kana": "チュ", "romaji": "chu"},
+{"kana": "チョ", "romaji": "cho"}
+],
+"example_words": [
+{"kana": "キャク", "romaji": "kyaku", "meaning": "guest; customer"},
+{"kana": "キョネン", "romaji": "kyonen", "meaning": "last year"},
+{"kana": "シャシン", "romaji": "shashin", "meaning": "photograph"},
+{"kana": "シュミ", "romaji": "shumi", "meaning": "hobby"},
+{"kana": "チャ", "romaji": "cha", "meaning": "tea"},
+{"kana": "チュウイ", "romaji": "chuui", "meaning": "caution; attention"}
+],
+"quiz_bank": [
+{"kana": "キャ", "romaji": "kya"},
+{"kana": "キュ", "romaji": "kyu"},
+{"kana": "キョ", "romaji": "kyo"},
+{"kana": "シャ", "romaji": "sha"},
+{"kana": "シュ", "romaji": "shu"},
+{"kana": "ショ", "romaji": "sho"},
+{"kana": "チャ", "romaji": "cha"},
+{"kana": "チュ", "romaji": "chu"},
+{"kana": "チョ", "romaji": "cho"},
+{"kana": "キャ", "romaji": "kya"}
+]
+},
+{
+"id": "katakana_yoon_n_h_m",
+"characters": [
+{"kana": "ニャ", "romaji": "nya"},
+{"kana": "ニュ", "romaji": "nyu"},
+{"kana": "ニョ", "romaji": "nyo"},
+{"kana": "ヒャ", "romaji": "hya"},
+{"kana": "ヒュ", "romaji": "hyu"},
+{"kana": "ヒョ", "romaji": "hyo"},
+{"kana": "ミャ", "romaji": "mya"},
+{"kana": "ミュ", "romaji": "myu"},
+{"kana": "ミョ", "romaji": "myo"}
+],
+"example_words": [
+{"kana": "ニュウイン", "romaji": "nyuuin", "meaning": "hospitalization"},
+{"kana": "ニュウガク", "romaji": "nyuugaku", "meaning": "school admission"},
+{"kana": "ヒャク", "romaji": "hyaku", "meaning": "one hundred"},
+{"kana": "ヒョウ", "romaji": "hyou", "meaning": "table; chart"},
+{"kana": "ミャク", "romaji": "myaku", "meaning": "pulse"},
+{"kana": "ミョウジ", "romaji": "myouji", "meaning": "surname"}
+],
+"quiz_bank": [
+{"kana": "ニャ", "romaji": "nya"},
+{"kana": "ニュ", "romaji": "nyu"},
+{"kana": "ニョ", "romaji": "nyo"},
+{"kana": "ヒャ", "romaji": "hya"},
+{"kana": "ヒュ", "romaji": "hyu"},
+{"kana": "ヒョ", "romaji": "hyo"},
+{"kana": "ミャ", "romaji": "mya"},
+{"kana": "ミュ", "romaji": "myu"},
+{"kana": "ミョ", "romaji": "myo"},
+{"kana": "ニャ", "romaji": "nya"}
+]
+},
+{
+"id": "katakana_yoon_r_g_j",
+"characters": [
+{"kana": "リャ", "romaji": "rya"},
+{"kana": "リュ", "romaji": "ryu"},
+{"kana": "リョ", "romaji": "ryo"},
+{"kana": "ギャ", "romaji": "gya"},
+{"kana": "ギュ", "romaji": "gyu"},
+{"kana": "ギョ", "romaji": "gyo"},
+{"kana": "ジャ", "romaji": "ja"},
+{"kana": "ジュ", "romaji": "ju"},
+{"kana": "ジョ", "romaji": "jo"}
+],
+"example_words": [
+{"kana": "リョコウ", "romaji": "ryokou", "meaning": "travel"},
+{"kana": "リョウリ", "romaji": "ryouri", "meaning": "cooking; cuisine"},
+{"kana": "ギュウニク", "romaji": "gyuuniku", "meaning": "beef"},
+{"kana": "ギョウザ", "romaji": "gyouza", "meaning": "gyoza dumplings"},
+{"kana": "ジャマ", "romaji": "jama", "meaning": "hindrance; in the way"},
+{"kana": "ジョセイ", "romaji": "josei", "meaning": "woman; female"}
+],
+"quiz_bank": [
+{"kana": "リャ", "romaji": "rya"},
+{"kana": "リュ", "romaji": "ryu"},
+{"kana": "リョ", "romaji": "ryo"},
+{"kana": "ギャ", "romaji": "gya"},
+{"kana": "ギュ", "romaji": "gyu"},
+{"kana": "ギョ", "romaji": "gyo"},
+{"kana": "ジャ", "romaji": "ja"},
+{"kana": "ジュ", "romaji": "ju"},
+{"kana": "ジョ", "romaji": "jo"},
+{"kana": "リャ", "romaji": "rya"}
+]
+},
+{
+"id": "katakana_yoon_b_p",
+"characters": [
+{"kana": "ビャ", "romaji": "bya"},
+{"kana": "ビュ", "romaji": "byu"},
+{"kana": "ビョ", "romaji": "byo"},
+{"kana": "ピャ", "romaji": "pya"},
+{"kana": "ピュ", "romaji": "pyu"},
+{"kana": "ピョ", "romaji": "pyo"}
+],
+"example_words": [
+{"kana": "ビョウイン", "romaji": "byouin", "meaning": "hospital"},
+{"kana": "ビョウキ", "romaji": "byouki", "meaning": "illness"},
+{"kana": "ビャクヤ", "romaji": "byakuya", "meaning": "white night"},
+{"kana": "ビュウビュウ", "romaji": "byuubyuu", "meaning": "whistling strongly (wind)"},
+{"kana": "ピョンピョン", "romaji": "pyonpyon", "meaning": "hopping repeatedly"},
+{"kana": "ピュア", "romaji": "pyua", "meaning": "pure"}
+],
+"quiz_bank": [
+{"kana": "ビャ", "romaji": "bya"},
+{"kana": "ビュ", "romaji": "byu"},
+{"kana": "ビョ", "romaji": "byo"},
+{"kana": "ピャ", "romaji": "pya"},
+{"kana": "ピュ", "romaji": "pyu"},
+{"kana": "ピョ", "romaji": "pyo"},
+{"kana": "ビャ", "romaji": "bya"},
+{"kana": "ビュ", "romaji": "byu"},
+{"kana": "ビョ", "romaji": "byo"},
+{"kana": "ピャ", "romaji": "pya"}
+]
+},
+{
+"id": "katakana_sokuon_long_vowels",
+"characters": [
+{"kana": "ッ", "romaji": "small-tsu"},
+{"kana": "ー", "romaji": "long-vowel"},
+{"kana": "アー", "romaji": "aa"},
+{"kana": "イー", "romaji": "ii"},
+{"kana": "ウー", "romaji": "uu"},
+{"kana": "エー", "romaji": "ee"},
+{"kana": "オー", "romaji": "oo"}
+],
+"example_words": [
+{"kana": "ケーキ", "romaji": "keeki", "meaning": "cake"},
+{"kana": "コーヒー", "romaji": "koohii", "meaning": "coffee"},
+{"kana": "サッカー", "romaji": "sakkaa", "meaning": "soccer"},
+{"kana": "ベッド", "romaji": "beddo", "meaning": "bed"},
+{"kana": "バッグ", "romaji": "baggu", "meaning": "bag"},
+{"kana": "スーパー", "romaji": "suupaa", "meaning": "supermarket"},
+{"kana": "タクシー", "romaji": "takushii", "meaning": "taxi"}
+],
+"quiz_bank": [
+{"kana": "ッ", "romaji": "small-tsu"},
+{"kana": "ー", "romaji": "long-vowel"},
+{"kana": "アー", "romaji": "aa"},
+{"kana": "イー", "romaji": "ii"},
+{"kana": "ウー", "romaji": "uu"},
+{"kana": "エー", "romaji": "ee"},
+{"kana": "オー", "romaji": "oo"},
+{"kana": "ッ", "romaji": "small-tsu"},
+{"kana": "ー", "romaji": "long-vowel"},
+{"kana": "アー", "romaji": "aa"}
+]
+},
+{
+"id": "katakana_foreign_sounds_1",
+"characters": [
+{"kana": "ファ", "romaji": "fa"},
+{"kana": "フィ", "romaji": "fi"},
+{"kana": "フェ", "romaji": "fe"},
+{"kana": "フォ", "romaji": "fo"},
+{"kana": "ティ", "romaji": "ti"},
+{"kana": "ディ", "romaji": "di"}
+],
+"example_words": [
+{"kana": "ファイル", "romaji": "fairu", "meaning": "file"},
+{"kana": "フィルム", "romaji": "firumu", "meaning": "film"},
+{"kana": "カフェ", "romaji": "kafe", "meaning": "cafe"},
+{"kana": "フォーク", "romaji": "fooku", "meaning": "fork"},
+{"kana": "パーティー", "romaji": "paatii", "meaning": "party"},
+{"kana": "ディナー", "romaji": "dinaa", "meaning": "dinner"}
+],
+"quiz_bank": [
+{"kana": "ファ", "romaji": "fa"},
+{"kana": "フィ", "romaji": "fi"},
+{"kana": "フェ", "romaji": "fe"},
+{"kana": "フォ", "romaji": "fo"},
+{"kana": "ティ", "romaji": "ti"},
+{"kana": "ディ", "romaji": "di"},
+{"kana": "ファ", "romaji": "fa"},
+{"kana": "フィ", "romaji": "fi"},
+{"kana": "フェ", "romaji": "fe"},
+{"kana": "フォ", "romaji": "fo"}
+]
+},
+{
+"id": "katakana_foreign_sounds_2",
+"characters": [
+{"kana": "ウィ", "romaji": "wi"},
+{"kana": "ウェ", "romaji": "we"},
+{"kana": "ウォ", "romaji": "wo"},
+{"kana": "シェ", "romaji": "she"},
+{"kana": "ジェ", "romaji": "je"},
+{"kana": "チェ", "romaji": "che"}
+],
+"example_words": [
+{"kana": "ウィンドウ", "romaji": "windou", "meaning": "window"},
+{"kana": "ウェブ", "romaji": "webu", "meaning": "web"},
+{"kana": "ウォーター", "romaji": "wootaa", "meaning": "water"},
+{"kana": "シェフ", "romaji": "shefu", "meaning": "chef"},
+{"kana": "ジェット", "romaji": "jetto", "meaning": "jet"},
+{"kana": "チェック", "romaji": "chekku", "meaning": "check"}
+],
+"quiz_bank": [
+{"kana": "ウィ", "romaji": "wi"},
+{"kana": "ウェ", "romaji": "we"},
+{"kana": "ウォ", "romaji": "wo"},
+{"kana": "シェ", "romaji": "she"},
+{"kana": "ジェ", "romaji": "je"},
+{"kana": "チェ", "romaji": "che"},
+{"kana": "ウィ", "romaji": "wi"},
+{"kana": "ウェ", "romaji": "we"},
+{"kana": "ウォ", "romaji": "wo"},
+{"kana": "シェ", "romaji": "she"}
+]
+},
+{
+"id": "katakana_foreign_sounds_3",
+"characters": [
+{"kana": "ツァ", "romaji": "tsa"},
+{"kana": "ツィ", "romaji": "tsi"},
+{"kana": "ツェ", "romaji": "tse"},
+{"kana": "ツォ", "romaji": "tso"},
+{"kana": "ヴ", "romaji": "vu"},
+{"kana": "ヴァ", "romaji": "va"},
+{"kana": "ヴィ", "romaji": "vi"},
+{"kana": "ヴェ", "romaji": "ve"},
+{"kana": "ヴォ", "romaji": "vo"}
+],
+"example_words": [
+{"kana": "ピッツァ", "romaji": "pittsa", "meaning": "pizza"},
+{"kana": "モーツァルト", "romaji": "mootsaruto", "meaning": "Mozart"},
+{"kana": "ツェッペリン", "romaji": "tsepperin", "meaning": "Zeppelin"},
+{"kana": "ヴァイオリン", "romaji": "vaiorin", "meaning": "violin"},
+{"kana": "ヴィーガン", "romaji": "viigan", "meaning": "vegan"},
+{"kana": "ヴォイス", "romaji": "voisu", "meaning": "voice"}
+],
+"quiz_bank": [
+{"kana": "ツァ", "romaji": "tsa"},
+{"kana": "ツィ", "romaji": "tsi"},
+{"kana": "ツェ", "romaji": "tse"},
+{"kana": "ツォ", "romaji": "tso"},
+{"kana": "ヴ", "romaji": "vu"},
+{"kana": "ヴァ", "romaji": "va"},
+{"kana": "ヴィ", "romaji": "vi"},
+{"kana": "ヴェ", "romaji": "ve"},
+{"kana": "ヴォ", "romaji": "vo"},
+{"kana": "ツァ", "romaji": "tsa"}
+]
+},
+{
+"id": "katakana_loanword_reading",
+"characters": [],
+"example_words": [
+{"kana": "コンピューター", "romaji": "konpyuutaa", "meaning": "computer"},
+{"kana": "レストラン", "romaji": "resutoran", "meaning": "restaurant"},
+{"kana": "ホテル", "romaji": "hoteru", "meaning": "hotel"},
+{"kana": "テレビ", "romaji": "terebi", "meaning": "television"},
+{"kana": "スマートフォン", "romaji": "sumaatofon", "meaning": "smartphone"},
+{"kana": "インターネット", "romaji": "intaanetto", "meaning": "internet"},
+{"kana": "アイスクリーム", "romaji": "aisukuriimu", "meaning": "ice cream"},
+{"kana": "チョコレート", "romaji": "chokoreeto", "meaning": "chocolate"}
+],
+"quiz_bank": [
+{"kana": "コンピューター", "romaji": "konpyuutaa"},
+{"kana": "レストラン", "romaji": "resutoran"},
+{"kana": "ホテル", "romaji": "hoteru"},
+{"kana": "テレビ", "romaji": "terebi"},
+{"kana": "スマートフォン", "romaji": "sumaatofon"},
+{"kana": "インターネット", "romaji": "intaanetto"},
+{"kana": "アイスクリーム", "romaji": "aisukuriimu"},
+{"kana": "チョコレート", "romaji": "chokoreeto"},
+{"kana": "エレベーター", "romaji": "erebeetaa"},
+{"kana": "カレンダー", "romaji": "karendaa"}
+]
+},
+{
+"id": "kanji_basic_1",
+"characters": [
+{"kana": "日", "romaji": "hi"},
+{"kana": "月", "romaji": "tsuki"},
+{"kana": "火", "romaji": "hi"},
+{"kana": "水", "romaji": "mizu"},
+{"kana": "木", "romaji": "ki"}
+],
+"example_words": [
+{"kana": "日", "romaji": "hi", "meaning": "sun; day"},
+{"kana": "月", "romaji": "tsuki", "meaning": "moon"},
+{"kana": "火", "romaji": "hi", "meaning": "fire"},
+{"kana": "水", "romaji": "mizu", "meaning": "water"},
+{"kana": "木", "romaji": "ki", "meaning": "tree"},
+{"kana": "水をのむ", "romaji": "mizu o nomu", "meaning": "drink water"},
+{"kana": "木のした", "romaji": "ki no shita", "meaning": "under a tree"}
+],
+"quiz_bank": [
+{"kana": "日", "romaji": "hi"},
+{"kana": "月", "romaji": "tsuki"},
+{"kana": "火", "romaji": "hi"},
+{"kana": "水", "romaji": "mizu"},
+{"kana": "木", "romaji": "ki"},
+{"kana": "日", "romaji": "hi"},
+{"kana": "月", "romaji": "tsuki"},
+{"kana": "火", "romaji": "hi"},
+{"kana": "水", "romaji": "mizu"},
+{"kana": "木", "romaji": "ki"}
+]
+},
+{
+"id": "kanji_basic_2",
+"characters": [
+{"kana": "金", "romaji": "kane"},
+{"kana": "土", "romaji": "tsuchi"},
+{"kana": "山", "romaji": "yama"},
+{"kana": "川", "romaji": "kawa"},
+{"kana": "田", "romaji": "ta"}
+],
+"example_words": [
+{"kana": "お金", "romaji": "okane", "meaning": "money"},
+{"kana": "土", "romaji": "tsuchi", "meaning": "soil; earth"},
+{"kana": "山", "romaji": "yama", "meaning": "mountain"},
+{"kana": "川", "romaji": "kawa", "meaning": "river"},
+{"kana": "田", "romaji": "ta", "meaning": "rice field"},
+{"kana": "山のうえ", "romaji": "yama no ue", "meaning": "top of the mountain"},
+{"kana": "川の水", "romaji": "kawa no mizu", "meaning": "river water"}
+],
+"quiz_bank": [
+{"kana": "金", "romaji": "kane"},
+{"kana": "土", "romaji": "tsuchi"},
+{"kana": "山", "romaji": "yama"},
+{"kana": "川", "romaji": "kawa"},
+{"kana": "田", "romaji": "ta"},
+{"kana": "金", "romaji": "kane"},
+{"kana": "土", "romaji": "tsuchi"},
+{"kana": "山", "romaji": "yama"},
+{"kana": "川", "romaji": "kawa"},
+{"kana": "田", "romaji": "ta"}
+]
+},
+{
+"id": "kanji_basic_3",
+"characters": [
+{"kana": "人", "romaji": "hito"},
+{"kana": "口", "romaji": "kuchi"},
+{"kana": "入", "romaji": "nyuu"},
+{"kana": "出", "romaji": "shutsu"},
+{"kana": "大", "romaji": "dai"}
+],
+"example_words": [
+{"kana": "人", "romaji": "hito", "meaning": "person"},
+{"kana": "口", "romaji": "kuchi", "meaning": "mouth"},
+{"kana": "入口", "romaji": "iriguchi", "meaning": "entrance"},
+{"kana": "出口", "romaji": "deguchi", "meaning": "exit"},
+{"kana": "大人", "romaji": "otona", "meaning": "adult"},
+{"kana": "大きい", "romaji": "ookii", "meaning": "big"},
+{"kana": "人口", "romaji": "jinkou", "meaning": "population"}
+],
+"quiz_bank": [
+{"kana": "人", "romaji": "hito"},
+{"kana": "口", "romaji": "kuchi"},
+{"kana": "入", "romaji": "nyuu"},
+{"kana": "出", "romaji": "shutsu"},
+{"kana": "大", "romaji": "dai"},
+{"kana": "人", "romaji": "hito"},
+{"kana": "口", "romaji": "kuchi"},
+{"kana": "入", "romaji": "nyuu"},
+{"kana": "出", "romaji": "shutsu"},
+{"kana": "大", "romaji": "dai"}
+]
+},
+{
+"id": "kanji_basic_4",
+"characters": [
+{"kana": "小", "romaji": "shou"},
+{"kana": "中", "romaji": "naka"},
+{"kana": "上", "romaji": "ue"},
+{"kana": "下", "romaji": "shita"},
+{"kana": "本", "romaji": "hon"}
+],
+"example_words": [
+{"kana": "小さい", "romaji": "chiisai", "meaning": "small"},
+{"kana": "中", "romaji": "naka", "meaning": "inside; middle"},
+{"kana": "上", "romaji": "ue", "meaning": "up; above"},
+{"kana": "下", "romaji": "shita", "meaning": "down; below"},
+{"kana": "本", "romaji": "hon", "meaning": "book"},
+{"kana": "日本", "romaji": "nihon", "meaning": "Japan"},
+{"kana": "本日", "romaji": "honjitsu", "meaning": "today (formal)"}
+],
+"quiz_bank": [
+{"kana": "小", "romaji": "shou"},
+{"kana": "中", "romaji": "naka"},
+{"kana": "上", "romaji": "ue"},
+{"kana": "下", "romaji": "shita"},
+{"kana": "本", "romaji": "hon"},
+{"kana": "小", "romaji": "shou"},
+{"kana": "中", "romaji": "naka"},
+{"kana": "上", "romaji": "ue"},
+{"kana": "下", "romaji": "shita"},
+{"kana": "本", "romaji": "hon"}
+]
+},
+{
+"id": "kanji_basic_5",
+"characters": [
+{"kana": "食", "romaji": "shoku"},
+{"kana": "飲", "romaji": "in"},
+{"kana": "肉", "romaji": "niku"},
+{"kana": "魚", "romaji": "sakana"},
+{"kana": "円", "romaji": "en"}
+],
+"example_words": [
+{"kana": "食べる", "romaji": "taberu", "meaning": "to eat"},
+{"kana": "飲む", "romaji": "nomu", "meaning": "to drink"},
+{"kana": "肉", "romaji": "niku", "meaning": "meat"},
+{"kana": "魚", "romaji": "sakana", "meaning": "fish"},
+{"kana": "円", "romaji": "en", "meaning": "yen"},
+{"kana": "肉を食べる", "romaji": "niku o taberu", "meaning": "eat meat"},
+{"kana": "水を飲む", "romaji": "mizu o nomu", "meaning": "drink water"},
+{"kana": "魚を食べる", "romaji": "sakana o taberu", "meaning": "eat fish"}
+],
+"quiz_bank": [
+{"kana": "食", "romaji": "shoku"},
+{"kana": "飲", "romaji": "in"},
+{"kana": "肉", "romaji": "niku"},
+{"kana": "魚", "romaji": "sakana"},
+{"kana": "円", "romaji": "en"},
+{"kana": "食", "romaji": "shoku"},
+{"kana": "飲", "romaji": "in"},
+{"kana": "肉", "romaji": "niku"},
+{"kana": "魚", "romaji": "sakana"},
+{"kana": "円", "romaji": "en"}
+]
+}
+],
+"advancement_rule": "1. Keep persistent state per learner: batch_status[id] in {locked, unlocked, introduced, mastered}; recognition_attempts as records {timestamp_local, local_date, batch_id, kana, correct}; reading_attempts as records {timestamp_local, local_date, batch_id, kana, correct}; and independent integer cursors for every batch/phase.\n2. The first batch starts unlocked. Every other batch is locked until the immediately preceding batch becomes mastered.\n3. A recognition answer is correct only when normalize(user_input) == normalize(item.romaji). normalize(s) = Unicode NFKC; lowercase ASCII letters; trim leading/trailing whitespace; remove internal ASCII spaces and hyphens. Do not infer alternate romanizations. The learner sees only item.kana on scored recognition prompts.\n4. For mastery calculations, a target is each UNIQUE kana string present in the active batch's quiz_bank. All scored recognition attempts for those targets in review, drill, or quiz count.\n5. A batch becomes mastered only at the END of a session when ALL conditions are true: (a) status is introduced; (b) scored recognition attempts for that batch occurred on at least 2 distinct local calendar dates; (c) at least 10 scored recognition attempts occurred on each of at least 2 of those dates; (d) every unique quiz target has at least 4 scored recognition attempts total; (e) accuracy over the most recent 20 scored recognition attempts for the batch is at least 0.90; (f) for every unique quiz target, at least 3 of its most recent 4 scored recognition attempts are correct; and (g) the current session's 5-item reading phase score is at least 4/5.\n6. If a batch has characters == [], its quiz_bank entries are word-level targets; apply the identical mastery rule to those word targets.\n7. When a batch becomes mastered, immediately change the next batch from locked to unlocked, but do NOT introduce that next batch in the same session. At most one previously unintroduced batch may be introduced per session.\n8. A mastered batch remains mastered permanently for progression purposes; later errors can make its targets weak for review but never re-lock later batches.\n9. After the final batch is mastered, the course is complete; subsequent sessions use maintenance mode described in session_sequence.",
+"weak_character_rule": "1. For every unlocked or mastered quiz target, define recent8 = its most recent min(8, lifetime_attempt_count) scored recognition attempts.\n2. A target is WEAK if any condition is true: lifetime_attempt_count < 4; OR accuracy(recent8) < 0.80; OR its most recent scored recognition attempt is incorrect.\n3. For a WEAK target, compute priority_score = 100I(most_recent_attempt_is_wrong) + 20errors_in_most_recent_4 + 5*errors_in_recent8 + min(days_since_last_scored_attempt, 14). If never attempted, use days_since_last_scored_attempt = 14.\n4. Sort weak targets by descending priority_score. Break ties by earlier batch order, then earlier first occurrence in that batch's quiz_bank.\n5. In the review phase, exclude targets from the current active batch; select prior weak targets first in the sorted order. If fewer than 10 review prompts are available, fill remaining slots with non-weak prior targets sorted by descending days_since_last_scored_attempt, then batch order, then quiz_bank order.\n6. In the drill phase, schedule exactly 12 prompts from the current active batch, 6 prompts from prior weak targets, and 2 prompts from prior non-weak spaced-review targets. If a prior category has too few targets, reassign its unused slots to the current active batch.\n7. Whenever a category needs more prompts than distinct targets, cycle through its ordered target list from the beginning until the required prompt count is reached. Persist a separate cursor per category so consecutive sessions resume at the next item rather than restarting at item 0.",
+"session_sequence": [
+"review: If there is at least one previously introduced batch before the current active batch, ask exactly 10 scored recognition prompts selected by weak_character_rule. Show only kana; collect romaji; immediately show correct/incorrect and the expected romaji. If there are no prior targets, ask 0 prompts and continue.",
+"new_material: Let ACTIVE be the earliest unlocked batch that is not mastered. If ACTIVE has never been introduced, set it to introduced and present each entry in ACTIVE.characters once in listed order as kana + romaji, then present the same entries once in reverse order as kana + romaji. If ACTIVE.characters is empty, present each ACTIVE.example_words entry once in listed order as kana + romaji + meaning. If ACTIVE was introduced in an earlier session, do not re-teach the full batch; show kana + romaji once only for ACTIVE targets whose most recent 4 recognition attempts contain fewer than 3 correct answers. This phase is unscored.",
+"drill: Ask exactly 20 scored recognition prompts using the 12-current/6-weak-prior/2-spaced-prior allocation in weak_character_rule. For current-batch prompts, traverse ACTIVE.quiz_bank cyclically using a persistent drill cursor. Show only kana before the answer. Give immediate correctness feedback and show expected romaji after each response.",
+"reading: Ask exactly 5 scored reading prompts from ACTIVE.example_words. Traverse the list cyclically with a persistent reading cursor. Show only the Japanese string in example_words[i].kana; require the learner to type example_words[i].romaji using the same normalize() rule. After each answer, show the expected romaji and English meaning. If the batch has fewer than 5 example words, cycle; in this curriculum every batch has at least 5.",
+"quiz: Ask exactly 10 scored prompts from ACTIVE.quiz_bank using a persistent quiz cursor independent of the drill cursor. Show only kana; do not show hints or correctness feedback until all 10 answers are collected. Then show score plus corrections. Evaluate advancement_rule exactly once. The session always stops after this phase; never introduce a newly unlocked next batch until a later session. Normal sessions therefore contain at most 45 scored prompts (10 review + 20 drill + 5 reading + 10 quiz), or 35 when review is empty. Maintenance mode after all batches are mastered: run 20 review prompts using weak priority then spaced-review order, then 10 reading prompts cycling across all example_words, then stop."
+]
+}
