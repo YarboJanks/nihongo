@@ -27,6 +27,7 @@ nihongo lesson     → GPT: grammar, vocab, conversation practice (after kana)
 | `nihongo curriculum` | Full course map: every batch's status and mastery stats, plus a checklist of exactly what's blocking the batch you're on |
 | `nihongo lesson` | Interactive GPT conversation for the current unit (grammar/vocab/conversation, once past kana) |
 | `nihongo review` | Self-graded spaced-repetition review of vocab/grammar learned in lessons |
+| `nihongo progress` | Detailed report: overview stats, session history, per-character kana accuracy, and SRS vocab/grammar detail |
 
 ## The kana engine
 

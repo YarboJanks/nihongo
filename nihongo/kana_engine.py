@@ -369,6 +369,36 @@ def course_overview(conn) -> list[dict]:
     return overview
 
 
+_KANA_ROMAJI: dict[str, str] = {}
+for _batch in BATCHES:
+    for _t in _batch["quiz_bank"]:
+        _KANA_ROMAJI.setdefault(_t["kana"], _t["romaji"])
+
+
+def character_progress(conn) -> list[dict]:
+    """Lifetime stats for every character ever drilled, worst-accuracy first
+    — the per-character detail `nihongo progress` shows beyond curriculum's
+    per-batch weak-count summary."""
+    rows = db.kana_char_stats(conn)
+    out = []
+    for r in rows:
+        accuracy = r["correct"] / r["attempts"] if r["attempts"] else 0.0
+        out.append(
+            {
+                "batch_id": r["batch_id"],
+                "kana": r["kana"],
+                "romaji": _KANA_ROMAJI.get(r["kana"], "?"),
+                "attempts": r["attempts"],
+                "correct": r["correct"],
+                "accuracy": accuracy,
+                "last_date": r["last_date"],
+                "weak": is_weak(conn, r["batch_id"], r["kana"]),
+            }
+        )
+    out.sort(key=lambda c: (c["accuracy"], -c["attempts"]))
+    return out
+
+
 def _unlock_next(conn, active_batch_id: str) -> str | None:
     idx = BATCH_ORDER.index(active_batch_id)
     if idx + 1 < len(BATCH_ORDER):

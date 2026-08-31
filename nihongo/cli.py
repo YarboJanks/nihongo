@@ -20,6 +20,17 @@ def _load_env() -> None:
     load_dotenv()  # allow a cwd-local .env to override
 
 
+def _format_duration(seconds: float) -> str:
+    seconds = int(seconds)
+    h, rem = divmod(seconds, 3600)
+    m, s = divmod(rem, 60)
+    if h:
+        return f"{h}h {m}m"
+    if m:
+        return f"{m}m {s}s"
+    return f"{s}s"
+
+
 def _compute_streak(conn) -> int:
     rows = conn.execute(
         "SELECT DISTINCT date(started_at) as d FROM sessions ORDER BY d DESC"
@@ -69,13 +80,15 @@ def status():
     console.print(table)
     if unit.engine == "kana_offline":
         console.print(
-            "\n[dim]Run [bold]nihongo kana[/bold] to continue, or "
-            "[bold]nihongo curriculum[/bold] for the full course map.[/dim]"
+            "\n[dim]Run [bold]nihongo kana[/bold] to continue, "
+            "[bold]nihongo curriculum[/bold] for the full course map, or "
+            "[bold]nihongo progress[/bold] for a detailed report.[/dim]"
         )
     else:
         console.print(
-            "\n[dim]Run [bold]nihongo lesson[/bold] to continue, or "
-            "[bold]nihongo review[/bold] for vocab/grammar review.[/dim]"
+            "\n[dim]Run [bold]nihongo lesson[/bold] to continue, "
+            "[bold]nihongo review[/bold] for vocab/grammar review, or "
+            "[bold]nihongo progress[/bold] for a detailed report.[/dim]"
         )
 
 
@@ -145,6 +158,140 @@ def curriculum_map():
             mark = "[green]✓[/green]" if item["met"] else "[red]✗[/red]"
             console.print(f"  {mark} {item['label']} — [dim]{item['detail']}[/dim]")
         console.print("  [dim](plus: that session's reading check needs 4/5)[/dim]")
+
+
+@app.command()
+def progress(sessions: int = 10, chars: int = 15, all_chars: bool = False, items: int = 20):
+    """Detailed progress report: overview stats, session history, a
+    per-character kana breakdown, and SRS vocab/grammar detail."""
+    _load_env()
+    conn = db.connect()
+    kana_engine.init(conn)
+
+    # --- Overview -----------------------------------------------------
+    n_attempts, n_correct = db.total_kana_accuracy(conn)
+    kstats = kana_engine.summary(conn)
+    srs_summary = db.srs_stats(conn)
+    streak = _compute_streak(conn)
+    session_totals = db.session_count(conn)
+    practice_seconds = db.total_practice_seconds(conn)
+
+    overview = Table(title="Overview", show_header=False, box=None, padding=(0, 1))
+    overview.add_row("Streak", f"{streak} day(s)")
+    kinds = ", ".join(f"{v} {k}" for k, v in session_totals["by_kind"].items())
+    overview.add_row("Sessions", f"{session_totals['total']} total ({kinds})" if kinds else "0")
+    overview.add_row("Time practiced", _format_duration(practice_seconds))
+    overview.add_row("Kana batches mastered", f"{kstats['mastered']}/{kstats['total']}")
+    overview.add_row(
+        "Kana lifetime accuracy",
+        f"{n_correct / n_attempts * 100:.1f}% over {n_attempts} attempt(s)"
+        if n_attempts
+        else "[dim]no attempts yet[/dim]",
+    )
+    by_type = ", ".join(f"{k}: {v}" for k, v in srs_summary["by_type"].items())
+    overview.add_row(
+        "SRS items",
+        f"{srs_summary['total']} total, {srs_summary['due']} due" + (f" ({by_type})" if by_type else ""),
+    )
+    console.print(overview)
+
+    # --- Recent sessions ------------------------------------------------
+    console.print("\n[bold]Recent sessions[/bold]")
+    session_scores = db.session_kana_stats(conn)
+    sess_table = Table()
+    sess_table.add_column("Date")
+    sess_table.add_column("Kind")
+    sess_table.add_column("Unit")
+    sess_table.add_column("Duration", justify="right")
+    sess_table.add_column("Score", justify="right")
+    for r in db.recent_sessions(conn, limit=sessions):
+        started = datetime.fromisoformat(r["started_at"])
+        if r["ended_at"]:
+            ended = datetime.fromisoformat(r["ended_at"])
+            duration = _format_duration((ended - started).total_seconds())
+        else:
+            duration = "[dim]in progress[/dim]"
+        score = "[dim]—[/dim]"
+        att, corr = session_scores.get(r["id"], (0, 0))
+        if att:
+            score = f"{corr}/{att} ({corr / att * 100:.0f}%)"
+        sess_table.add_row(
+            started.strftime("%Y-%m-%d %H:%M"), r["kind"], r["unit_id"] or "[dim]—[/dim]", duration, score
+        )
+    console.print(sess_table)
+
+    # --- Kana character breakdown ---------------------------------------
+    char_progress = kana_engine.character_progress(conn)
+    if char_progress:
+        shown = char_progress if all_chars else char_progress[:chars]
+        note = (
+            ""
+            if all_chars or len(shown) >= len(char_progress)
+            else f" [dim](weakest {len(shown)} of {len(char_progress)} — pass --all-chars for the full list)[/dim]"
+        )
+        console.print(f"\n[bold]Kana character breakdown[/bold]{note}")
+        char_table = Table()
+        char_table.add_column("Kana")
+        char_table.add_column("Romaji")
+        char_table.add_column("Batch")
+        char_table.add_column("Attempts", justify="right")
+        char_table.add_column("Accuracy", justify="right")
+        char_table.add_column("Last practiced")
+        for c in shown:
+            style = "red" if c["accuracy"] < 0.8 else ("yellow" if c["accuracy"] < 0.9 else "green")
+            char_table.add_row(
+                c["kana"],
+                c["romaji"],
+                c["batch_id"].replace("_", " ").title(),
+                str(c["attempts"]),
+                f"[{style}]{c['accuracy'] * 100:.0f}%[/{style}]",
+                c["last_date"] or "[dim]—[/dim]",
+            )
+        console.print(char_table)
+    else:
+        console.print("\n[dim]No kana attempts recorded yet.[/dim]")
+
+    # --- SRS vocab/grammar detail ----------------------------------------
+    srs_rows = db.all_srs_items(conn)
+    if srs_rows:
+        shown_srs = srs_rows[:items]
+        note = (
+            ""
+            if len(shown_srs) >= len(srs_rows)
+            else f" [dim](showing {items} of {len(srs_rows)}, soonest due first — pass --items to show more)[/dim]"
+        )
+        console.print(f"\n[bold]SRS vocab & grammar[/bold]{note}")
+        srs_table = Table()
+        srs_table.add_column("Type")
+        srs_table.add_column("Prompt")
+        srs_table.add_column("Answer")
+        srs_table.add_column("Meaning")
+        srs_table.add_column("Reps", justify="right")
+        srs_table.add_column("Interval", justify="right")
+        srs_table.add_column("Due date")
+        srs_table.add_column("Status")
+        today = date.today()
+        for r in shown_srs:
+            due = date.fromisoformat(r["due_date"])
+            if r["reps"] == 0:
+                status = "[cyan]new[/cyan]"
+            elif due <= today:
+                status = "[red]due[/red]"
+            else:
+                status = "[dim]scheduled[/dim]"
+            srs_table.add_row(
+                r["item_type"],
+                r["prompt"],
+                r["answer"],
+                r["meaning"] or "[dim]—[/dim]",
+                str(r["reps"]),
+                f"{r['interval_days']:.0f}d",
+                r["due_date"],
+                status,
+            )
+        console.print(srs_table)
+    else:
+        console.print("\n[dim]No vocab/grammar items yet — those show up once you start `nihongo lesson`.[/dim]")
 
 
 @app.command()

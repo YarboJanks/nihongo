@@ -195,6 +195,11 @@ def srs_stats(conn: sqlite3.Connection) -> dict:
     return {"total": total, "due": due, "by_type": {r["item_type"]: r["n"] for r in by_type}}
 
 
+def all_srs_items(conn: sqlite3.Connection) -> list[sqlite3.Row]:
+    """Every vocab/grammar item, soonest due first, for the detailed progress report."""
+    return conn.execute("SELECT * FROM srs_items ORDER BY due_date").fetchall()
+
+
 def start_session(conn: sqlite3.Connection, kind: str, unit_id: str) -> int:
     cur = conn.execute(
         "INSERT INTO sessions (kind, unit_id, started_at) VALUES (?, ?, ?)",
@@ -216,6 +221,36 @@ def recent_sessions(conn: sqlite3.Connection, limit: int = 5) -> list[sqlite3.Ro
     return conn.execute(
         "SELECT * FROM sessions ORDER BY id DESC LIMIT ?", (limit,)
     ).fetchall()
+
+
+def session_count(conn: sqlite3.Connection) -> dict:
+    rows = conn.execute("SELECT kind, COUNT(*) as n FROM sessions GROUP BY kind").fetchall()
+    by_kind = {r["kind"]: r["n"] for r in rows}
+    return {"total": sum(by_kind.values()), "by_kind": by_kind}
+
+
+def total_practice_seconds(conn: sqlite3.Connection) -> float:
+    rows = conn.execute(
+        "SELECT started_at, ended_at FROM sessions WHERE ended_at IS NOT NULL"
+    ).fetchall()
+    total = 0.0
+    for r in rows:
+        start = datetime.fromisoformat(r["started_at"])
+        end = datetime.fromisoformat(r["ended_at"])
+        total += (end - start).total_seconds()
+    return total
+
+
+def session_kana_stats(conn: sqlite3.Connection) -> dict[int, tuple[int, int]]:
+    """Maps session_id -> (attempts, correct) over recognition-phase kana
+    attempts, for scoring each row in the session-history report."""
+    rows = conn.execute(
+        """SELECT session_id, COUNT(*) AS attempts, SUM(correct) AS correct
+           FROM kana_attempts
+           WHERE session_id IS NOT NULL AND phase = 'recognition'
+           GROUP BY session_id"""
+    ).fetchall()
+    return {r["session_id"]: (r["attempts"], r["correct"]) for r in rows}
 
 
 # --- kana engine persistence -------------------------------------------------
@@ -316,6 +351,25 @@ def attempts_in_session(conn: sqlite3.Connection, batch_id: str, session_id: int
         "SELECT COUNT(*) FROM kana_attempts WHERE batch_id = ? AND phase = ? AND session_id = ?",
         (batch_id, phase, session_id),
     ).fetchone()[0]
+
+
+def kana_char_stats(conn: sqlite3.Connection) -> list[sqlite3.Row]:
+    """Lifetime attempts/correct/last-practiced-date per character, over
+    recognition-phase attempts, for the detailed progress report."""
+    return conn.execute(
+        """SELECT batch_id, kana, COUNT(*) AS attempts, SUM(correct) AS correct,
+                  MAX(local_date) AS last_date
+           FROM kana_attempts
+           WHERE phase = 'recognition'
+           GROUP BY batch_id, kana"""
+    ).fetchall()
+
+
+def total_kana_accuracy(conn: sqlite3.Connection) -> tuple[int, int]:
+    row = conn.execute(
+        "SELECT COUNT(*) AS n, COALESCE(SUM(correct), 0) AS c FROM kana_attempts WHERE phase = 'recognition'"
+    ).fetchone()
+    return row["n"], row["c"]
 
 
 def get_kana_cursor(conn: sqlite3.Connection, name: str) -> int:
