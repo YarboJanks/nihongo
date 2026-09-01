@@ -47,6 +47,17 @@ def init(conn) -> None:
     db.init_kana_batches(conn, BATCH_ORDER)
 
 
+def select_batch(conn, batch_id: str) -> None:
+    """Manually pin a batch to work on, unlocking it immediately if it's
+    still locked — lets the learner jump forward past where the curriculum
+    would naturally be, or back to any earlier batch, on demand."""
+    if batch_id not in BATCHES_BY_ID:
+        raise ValueError(f"Unknown batch id: {batch_id}")
+    row = db.get_kana_batch(conn, batch_id)
+    if row["status"] == "locked":
+        db.set_kana_batch_status(conn, batch_id, "unlocked")
+
+
 def summary(conn) -> dict:
     rows = db.all_kana_batches(conn)
     mastered = sum(1 for r in rows if r["status"] == "mastered")
@@ -150,9 +161,13 @@ def build_review_prompts(conn) -> list[dict]:
     return taken
 
 
-def build_drill_prompts(conn, active_batch_id: str) -> list[dict]:
-    weak_sorted = _sorted_weak_targets(conn)
-    nonweak_sorted = _sorted_nonweak_targets(conn)
+def build_drill_prompts(conn, active_batch_id: str, isolated: bool = False) -> list[dict]:
+    """isolated drops the weak/spaced cross-batch slots entirely, drilling
+    only the given batch's own characters — used for a manually selected
+    batch (see select_batch) so practice stays confined to what was picked
+    instead of pulling in material from other batches."""
+    weak_sorted = [] if isolated else _sorted_weak_targets(conn)
+    nonweak_sorted = [] if isolated else _sorted_nonweak_targets(conn)
 
     weak_n = DRILL_WEAK if weak_sorted else 0
     spaced_n = DRILL_SPACED if nonweak_sorted else 0
@@ -217,6 +232,8 @@ def teach_new_material(conn, console: Console, active_batch: dict) -> None:
         else:
             for w in active_batch["example_words"]:
                 console.print(f"  {w['kana']}  →  {w['romaji']} ({w['meaning']})")
+    elif batch_row["status"] == "mastered":
+        console.print("  [dim]Already mastered — this is a bonus practice round, picked manually.[/dim]")
     else:
         targets = _unique_targets(active_batch)
         weak_now = []
@@ -467,15 +484,22 @@ def _run_maintenance(conn, console: Console, session_id: int) -> None:
     )
 
 
-def _run_one_round(conn, console: Console, active_id: str, session_id: int) -> dict:
+def _run_one_round(conn, console: Console, active_id: str, session_id: int, isolated: bool = False) -> dict:
     """One full review→teach→drill→read→quiz round for the active batch.
-    Returns a result dict; raises EOFError if the learner bails mid-round."""
+    Returns a result dict; raises EOFError if the learner bails mid-round.
+
+    isolated confines the round to just this batch's own material — used
+    when the learner manually selected this batch (see select_batch), so
+    practice stays independent instead of pulling in review/drill content
+    from other batches: it drops the opening cross-batch review round, and
+    drill draws all 20 slots from this batch instead of reserving some for
+    other batches' weak/spaced characters."""
     active = BATCHES_BY_ID[active_id]
     header = f"[bold cyan]{active_id}[/bold cyan]"
 
     console.print(f"{header}\n")
 
-    review_prompts = build_review_prompts(conn)
+    review_prompts = [] if isolated else build_review_prompts(conn)
     if review_prompts:
         _run_scored_round(
             conn, console, review_prompts, "recognition", session_id,
@@ -487,7 +511,7 @@ def _run_one_round(conn, console: Console, active_id: str, session_id: int) -> d
     teach_new_material(conn, console, active)
     console.input("\n[dim]Press enter when ready to drill...[/dim]")
 
-    drill_prompts = build_drill_prompts(conn, active_id)
+    drill_prompts = build_drill_prompts(conn, active_id, isolated=isolated)
     drill_correct, _ = _run_scored_round(
         conn, console, drill_prompts, "recognition", session_id,
         header=f"{header} — [bold]Drill[/bold]",
@@ -537,12 +561,20 @@ def _run_one_round(conn, console: Console, active_id: str, session_id: int) -> d
     }
 
 
-def run_session(conn, console: Console) -> None:
+def run_session(conn, console: Console, batch_id: str | None = None) -> None:
     # The whole sitting — however many rounds you do — runs in the
     # terminal's alternate screen buffer, like vim/htop, so none of it
     # lands in your normal scrollback. Only the final summary prints after
     # the `with` block exits, so that's the one thing left visible.
+    #
+    # batch_id pins every round in this sitting to one manually-chosen batch
+    # instead of the auto-selected earliest-incomplete one (see select_batch)
+    # — the learner's deliberate choice to work forward or backward in the
+    # curriculum takes priority over the normal progression for as long as
+    # this session runs; the next plain `nihongo kana` goes back to auto mode.
     init(conn)
+    if batch_id is not None:
+        select_batch(conn, batch_id)
     rounds = 0
     mastered_this_sitting = []
     course_complete = False
@@ -551,14 +583,16 @@ def run_session(conn, console: Console) -> None:
     try:
         with console.screen(hide_cursor=False):
             while True:
-                active_id = db.get_active_kana_batch_id(conn)
+                active_id = batch_id if batch_id is not None else db.get_active_kana_batch_id(conn)
                 session_id = db.start_session(conn, "kana", "kana_mastery")
                 try:
                     if active_id is None:
                         _run_maintenance(conn, console, session_id)
                         outcome = {}
                     else:
-                        outcome = _run_one_round(conn, console, active_id, session_id)
+                        outcome = _run_one_round(
+                            conn, console, active_id, session_id, isolated=batch_id is not None
+                        )
                 except EOFError:
                     db.end_session(conn, session_id)
                     ended_early = True

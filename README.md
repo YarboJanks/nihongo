@@ -23,7 +23,7 @@ nihongo lesson     → GPT: grammar, vocab, conversation practice (after kana)
 | Command | What it does |
 |---|---|
 | `nihongo` | Status dashboard — current unit, streak, what's due |
-| `nihongo kana` | Run a kana practice session (review → teach → drill → reading → quiz), looping across as many rounds as you want in one sitting |
+| `nihongo kana` | Run a kana practice session (review → teach → drill → reading → quiz), looping across as many rounds as you want in one sitting. Pass `--select` to manually pick which batch to work on — locked batches unlock immediately so you can jump forward or backward through the curriculum on demand, and the session is isolated to just that batch (no cross-batch review opener, no other batches' characters mixed into drill) |
 | `nihongo curriculum` | Full course map: every batch's status and mastery stats, plus a checklist of exactly what's blocking the batch you're on |
 | `nihongo lesson` | Interactive GPT conversation for the current unit (grammar/vocab/conversation, once past kana) |
 | `nihongo review` | Self-graded spaced-repetition review of vocab/grammar learned in lessons |

@@ -115,12 +115,68 @@ def lesson():
     tutor.run_lesson(conn, console)
 
 
+_STATUS_LABELS = {
+    "locked": "[dim]locked[/dim]",
+    "unlocked": "[cyan]next up[/cyan]",
+    "introduced": "[yellow]in progress[/yellow]",
+    "mastered": "[green]mastered[/green]",
+}
+
+
+def _batch_overview_table(conn, title: str) -> Table:
+    table = Table(title=title)
+    table.add_column("#", justify="right")
+    table.add_column("Batch")
+    table.add_column("Status")
+    table.add_column("Accuracy", justify="right")
+    table.add_column("Weak", justify="right")
+    for i, row in enumerate(kana_engine.course_overview(conn), start=1):
+        label = row["id"].replace("_", " ").title()
+        acc = f"{row['accuracy'] * 100:.0f}%" if row["accuracy"] is not None else "[dim]—[/dim]"
+        weak = str(row["weak"]) if row["weak"] is not None else "[dim]—[/dim]"
+        table.add_row(str(i), label, _STATUS_LABELS[row["status"]], acc, weak)
+    return table
+
+
+def _pick_batch(conn) -> str | None:
+    overview = kana_engine.course_overview(conn)
+    console.print(_batch_overview_table(conn, "Pick a batch to work on"))
+    console.print(
+        "\n[dim]Locked batches unlock immediately if you pick them — "
+        "jump forward or back as you like.[/dim]"
+    )
+    raw = console.input("Enter a batch number (or press enter to cancel): ").strip()
+    if not raw:
+        return None
+    if not raw.isdigit() or not (1 <= int(raw) <= len(overview)):
+        console.print("[red]Not a valid batch number.[/red]")
+        return None
+    return overview[int(raw) - 1]["id"]
+
+
 @app.command()
-def kana():
-    """Run one offline kana session: review, new material, drill, reading, quiz."""
+def kana(select: bool = False):
+    """Run one offline kana session: review, new material, drill, reading, quiz.
+
+    Pass --select to manually pick which batch to work on instead of
+    continuing automatically — locked batches unlock immediately, so you can
+    jump forward or backward through the curriculum on demand. A manually
+    selected batch is isolated from the rest of the curriculum: no opening
+    review of already-mastered material, and drill draws only from that
+    batch's own characters instead of mixing in others'.
+    """
     _load_env()
     conn = db.connect()
-    kana_engine.run_session(conn, console)
+    kana_engine.init(conn)
+
+    batch_id = None
+    if select:
+        batch_id = _pick_batch(conn)
+        if batch_id is None:
+            console.print("[dim]Cancelled.[/dim]")
+            return
+
+    kana_engine.run_session(conn, console, batch_id=batch_id)
 
 
 @app.command(name="curriculum")
@@ -130,26 +186,7 @@ def curriculum_map():
     conn = db.connect()
     kana_engine.init(conn)
 
-    table = Table(title="Kana curriculum")
-    table.add_column("#", justify="right")
-    table.add_column("Batch")
-    table.add_column("Status")
-    table.add_column("Accuracy", justify="right")
-    table.add_column("Weak", justify="right")
-
-    for i, row in enumerate(kana_engine.course_overview(conn), start=1):
-        label = row["id"].replace("_", " ").title()
-        acc = f"{row['accuracy'] * 100:.0f}%" if row["accuracy"] is not None else "[dim]—[/dim]"
-        weak = str(row["weak"]) if row["weak"] is not None else "[dim]—[/dim]"
-        status_labels = {
-            "locked": "[dim]locked[/dim]",
-            "unlocked": "[cyan]next up[/cyan]",
-            "introduced": "[yellow]in progress[/yellow]",
-            "mastered": "[green]mastered[/green]",
-        }
-        table.add_row(str(i), label, status_labels[row["status"]], acc, weak)
-
-    console.print(table)
+    console.print(_batch_overview_table(conn, "Kana curriculum"))
 
     active_id = db.get_active_kana_batch_id(conn)
     if active_id:
