@@ -40,10 +40,14 @@ Each round is: **review** (weak/older characters resurface first, spaced by
 priority) → **new material** (only shown once per batch; later rounds just
 reinforce anything still shaky) → **drill** (20 prompts split 12 current /
 6 weak-prior / 2 spaced-prior) → **reading** (real words, not isolated
-characters) → **quiz** (10 prompts, no feedback until the end). Presentation
-order is shuffled every round so you can't pattern-match a fixed sequence —
-only the underlying selection logic (what to test, weak-character priority)
-stays deterministic.
+characters) → **quiz** (10 prompts; ✓/✗ shown after each one so you're never
+left rehearsing a wrong answer, but the correct romaji isn't revealed until
+the round ends). Presentation order is shuffled every round so you can't
+pattern-match a fixed sequence — only the underlying selection logic (what
+to test, weak-character priority) stays deterministic.
+
+Every wrong answer also shows the correct romaji, and — for kanji, which
+carry real meanings (水 → "water") — the meaning too, not just the reading.
 
 A batch only unlocks the next one once **all** of these hold:
 

@@ -9,6 +9,7 @@ here is plain deterministic logic over locally stored attempt history.
 
 import json
 import random
+import time
 import unicodedata
 from datetime import date
 from pathlib import Path
@@ -30,6 +31,9 @@ DRILL_WEAK = 6
 DRILL_SPACED = 2
 READING_COUNT = 5
 QUIZ_COUNT = 10
+
+CORRECT_PAUSE = 0.6  # brief — no need to linger on a right answer
+MISS_PAUSE = 1.8  # long enough to actually read the correction before it clears
 
 
 def normalize(s: str) -> str:
@@ -237,8 +241,18 @@ def teach_new_material(conn, console: Console, active_batch: dict) -> None:
 
 def _run_scored_round(
     conn, console: Console, prompts: list[dict], phase: str, session_id: int,
-    immediate_feedback: bool = True, header: str = "",
+    reveal_answer: bool = True, header: str = "",
 ):
+    """show_correctness is always on — the learner sees ✓/✗ after every
+    answer so they never rehearse a wrong reading unaware. reveal_answer
+    additionally shows the correct romaji (and meaning, for kanji) on a
+    miss; quiz rounds turn that off to keep some test rigor while still
+    confirming right vs. wrong immediately.
+
+    Each prompt still gets a clean, single-card screen (no backlog of past
+    answers to read off of) — but there's a brief pause after feedback,
+    longer on a miss, before the screen clears to the next card, so the
+    feedback is actually readable instead of vanishing instantly."""
     correct_n = 0
     results = []
     for i, p in enumerate(prompts):
@@ -249,8 +263,17 @@ def _run_scored_round(
         ok = normalize(raw) == normalize(p["romaji"])
         db.record_kana_attempt(conn, p["batch_id"], p["kana"], phase, ok, session_id=session_id)
         correct_n += int(ok)
-        if immediate_feedback:
-            console.print("  [green]correct[/green]" if ok else f"  [red]✗ it's '{p['romaji']}'[/red]")
+        if ok:
+            console.print("  [green]correct[/green]")
+            time.sleep(CORRECT_PAUSE)
+        elif reveal_answer:
+            meaning = _KANA_MEANING.get(p["kana"])
+            suffix = f" — {meaning}" if meaning else ""
+            console.print(f"  [red]✗ it's '{p['romaji']}'{suffix}[/red]")
+            time.sleep(MISS_PAUSE)
+        else:
+            console.print("  [red]✗ not quite[/red]")
+            time.sleep(MISS_PAUSE)
         results.append((p, ok))
     return correct_n, results
 
@@ -268,6 +291,7 @@ def _run_reading_round(conn, console: Console, prompts: list[dict], session_id: 
         tag = "[green]✓[/green]" if ok else "[red]✗[/red]"
         meaning = f" — {p['meaning']}" if p.get("meaning") else ""
         console.print(f"  {tag} {p['romaji']}{meaning}")
+        time.sleep(CORRECT_PAUSE if ok else MISS_PAUSE)
     return correct_n
 
 
@@ -374,6 +398,15 @@ for _batch in BATCHES:
     for _t in _batch["quiz_bank"]:
         _KANA_ROMAJI.setdefault(_t["kana"], _t["romaji"])
 
+# Meanings only exist for single-character entries in example_words — in
+# practice that's kanji (水 → water), since kana batches' example words are
+# multi-character. Feeds the meaning shown alongside a missed kanji answer.
+_KANA_MEANING: dict[str, str] = {}
+for _batch in BATCHES:
+    for _w in _batch.get("example_words", []):
+        if _w.get("meaning"):
+            _KANA_MEANING.setdefault(_w["kana"], _w["meaning"])
+
 
 def character_progress(conn) -> list[dict]:
     """Lifetime stats for every character ever drilled, worst-accuracy first
@@ -471,8 +504,8 @@ def _run_one_round(conn, console: Console, active_id: str, session_id: int) -> d
 
     quiz_prompts = build_quiz_prompts(conn, active_id)
     quiz_correct, quiz_results = _run_scored_round(
-        conn, console, quiz_prompts, "recognition", session_id, immediate_feedback=False,
-        header=f"{header} — [bold]Quiz[/bold] [dim](no feedback until the end)[/dim]",
+        conn, console, quiz_prompts, "recognition", session_id, reveal_answer=False,
+        header=f"{header} — [bold]Quiz[/bold] [dim](✓/✗ shown, correct answers revealed at the end)[/dim]",
     )
 
     console.clear()
